@@ -4,8 +4,10 @@ import Midsec from './footer sections/midsec'
 const Footer = () => {
   return (
    <>
+   <footer>
     <Midsec/>
     <Bottomsec/>
+    </footer>
    </>
   )
 }
