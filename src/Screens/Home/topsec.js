@@ -5,8 +5,7 @@ import astore from "../../Assets/AppStore.png"
 const Topsec = () => {
   return (
     <>
-        <div className='w-screen h-max lg:realative' style={{
-    "background": "linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+        <div className='w-screen h-max lg:realative' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
         <div className='flex lg:flex-row flex-col mx-20' >
             <div className='w-2/3 flex flex-col'>
             <div className='lg:absolute w-full lg:w-1/2 left-36 font-semibold'>

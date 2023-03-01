@@ -7,8 +7,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className='max-w-screen h-32' style={{
-    "background": "linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+    <div className='max-w-screen h-32' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
     <div className='lg:flex lg:mx-28 flex'>
     <div className='w-10/12 mt-6 md:mt-0 md:w-auto'>
       <Link to="/" className='grid items-center'>
@@ -17,11 +16,11 @@ const Navbar = () => {
     </div>
     <div className='ml-auto hidden md:block'>
       <div className='flex mt-8 font-semibold text-[#1D1E21]'>
-        <Link className='px-5 py-1' to="#"><p className='hover-underline-animation'>Why Choose Us</p></Link>
-        <Link className='px-5 py-1' to="#"><p className='hover-underline-animation'>How It Works</p></Link>
-        <Link className='px-5 py-1' to="#"><p className='hover-underline-animation'>How To Rent</p></Link>
-        <Link className='px-5 py-1' to="#"><p className='hover-underline-animation'>Rent Now</p></Link>
-        <Link className='px-5 py-1 border-l border-[#BEBEBE]' to="/Login"><p className='hover-underline-animation'>Login</p></Link>
+        <Link to="#" className='px-7 py-1' to="#"><p className='hover-underline-animation'>Why Choose Us</p></Link>
+        <Link to="#" className='px-7 py-1' to="#"><p className='hover-underline-animation'>How It Works</p></Link>
+        <Link to="#" className='px-7 py-1' to="#"><p className='hover-underline-animation'>How To Rent</p></Link>
+        <Link to="#" className='px-7 py-1' to="#"><p className='hover-underline-animation'>Rent Now</p></Link>
+        <Link to="#" className='px-7 py-1 border-l border-[#BEBEBE]' to="/Login"><p className='hover-underline-animation'>Login</p></Link>
       </div>
     </div>
     <div>
