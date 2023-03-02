@@ -6,7 +6,7 @@ import Car from "../../Assets/car.png"
 const HowItWorkSec = () => {
   return (
     <>
-        <div className='w-full grid place-items-center mt-32 mb-36'>
+        <div className='w-full grid place-items-center mt-40 mb-36'>
         <div className='w-3/4 h-max text-center mb-16'>
             <div className='h-full w-full text-xl mb-4 font-bold text-[#ACAEB4]'>
                 How It Works
@@ -19,7 +19,7 @@ const HowItWorkSec = () => {
             <div className='w-56 h-full grid place-items-center'>
             <div className='transition duration-300 ease-in-out hover:scale-110 rounded-3xl shadow-lg w-24 h-24 grid place-items-center'>
                 <div>
-                <img src={Location}>
+                <img alt="" src={Location}>
                 </img>
                 </div>
             </div>
@@ -33,7 +33,7 @@ const HowItWorkSec = () => {
 
 
             <div className='mb-32'>
-                <img src={Line}>
+                <img alt="" src={Line}>
                 </img>
             </div>
 
@@ -41,7 +41,7 @@ const HowItWorkSec = () => {
             <div>
             <div className='w-56 h-full grid place-items-center'>
                 <div className='transition duration-300 ease-in-out hover:scale-110 w-28 h-28 rounded-3xl grid place-items-center' style={{"background": "radial-gradient(115.89% 115.89% at 49.61% 115.89%, #20BFB6 0%, #09FFF1 100%)"}}>
-                <img className='mt-4 mr-4' src={Calendar}>
+                <img alt="" className='mt-4 mr-4' src={Calendar}>
                 </img>
                 </div>
                 <div className='w-full grid place-items-center text-center mt-10'>
@@ -53,7 +53,7 @@ const HowItWorkSec = () => {
 
 
             <div className='mb-32'>
-                <img src={Line}>
+                <img alt="" src={Line}>
                 </img>
             </div>
 
@@ -61,7 +61,7 @@ const HowItWorkSec = () => {
             <div className='w-56 h-full grid place-items-center'>
             <div className='transition duration-300 ease-in-out hover:scale-110 rounded-3xl shadow-lg w-24 h-24 grid place-items-center'>
                 <div>
-                <img className='mr-4 mt-4' src={Car}>
+                <img alt="" className='mr-4 mt-4' src={Car}>
                 </img>
                 </div>
             </div>
