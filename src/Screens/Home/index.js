@@ -4,7 +4,7 @@ import Detailsec from './detailsec';
 import CarLogoSec from './carLogoSec';
 import HowItWorkSec from './howItWorkSec';
 import WhyChooseUs from './whyChooseUs';
-import PopularRentalDeals from './popularRentalDeals';
+import Testimonials from './Testimonials';
 const Home = () => {
   return (
     <>
@@ -13,7 +13,7 @@ const Home = () => {
       <CarLogoSec/>
       <HowItWorkSec/>
       <WhyChooseUs/>
-      <PopularRentalDeals/>
+      <Testimonials/>
     </>
   )
 }
