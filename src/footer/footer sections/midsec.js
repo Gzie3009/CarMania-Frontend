@@ -9,14 +9,14 @@ const Midsec = () => {
   return (
     <>
         <div className='w-screen h-32 md:h-56 bg-black mt-32'>
-            <div className='h-full w-11/12 flex mx-20 place-items-center justify-evenly'>
+            <div className='h-full w-11/12 flex place-items-center justify-around'>
               <div>
                 <img alt='' src={logo}></img>
               </div>
-              <div className='text-white'>Sahizada Ajit Singh Nagar, Kharar , Mohali ,Punjab - 140413</div>
+              <div className='text-white w-64'>Sahizada Ajit Singh Nagar, Kharar , Mohali ,Punjab - 140413</div>
               <div className='flex'>
                 <img alt="tel" src={TelIcon}></img>
-                <p>+91-1234455666</p>
+                <p className='text-xl text-white'>+91-1234455666</p>
               </div>
               <div>
                 <div className='text-white font-bold text-2xl ml-10'>Follow Us</div>
