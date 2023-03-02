@@ -1,9 +1,9 @@
 import React from 'react'
 import CarWithMap from "../../Assets/CarWithMap.png"
-import G25 from "../../Assets/Group\ 25.png" 
-import G26 from "../../Assets/Group\ 26.png" 
-import G27 from "../../Assets/Group\ 27.png" 
-import G28 from "../../Assets/Group\ 28.png" 
+import G25 from "../../Assets/Group 25.png" 
+import G26 from "../../Assets/Group 26.png" 
+import G27 from "../../Assets/Group 27.png" 
+import G28 from "../../Assets/Group 28.png" 
 const WhyChooseUs = () => {
   return (
     <>
