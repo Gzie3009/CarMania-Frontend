@@ -16,11 +16,11 @@ const Navbar = () => {
     </div>
     <div className='ml-auto hidden md:block'>
       <div className='flex mt-8 font-semibold text-[#1D1E21]'>
-        <Link to="#" className='px-7 py-1' to="#"><p className='hover-underline-animation'>Why Choose Us</p></Link>
-        <Link to="#" className='px-7 py-1' to="#"><p className='hover-underline-animation'>How It Works</p></Link>
-        <Link to="#" className='px-7 py-1' to="#"><p className='hover-underline-animation'>How To Rent</p></Link>
-        <Link to="#" className='px-7 py-1' to="#"><p className='hover-underline-animation'>Rent Now</p></Link>
-        <Link to="#" className='px-7 py-1 border-l border-[#BEBEBE]' to="/Login"><p className='hover-underline-animation'>Login</p></Link>
+        <Link className='px-7 py-1' to="#"><p className='hover-underline-animation'>Why Choose Us</p></Link>
+        <Link className='px-7 py-1' to="#"><p className='hover-underline-animation'>How It Works</p></Link>
+        <Link className='px-7 py-1' to="#"><p className='hover-underline-animation'>How To Rent</p></Link>
+        <Link className='px-7 py-1' to="#"><p className='hover-underline-animation'>Rent Now</p></Link>
+        <Link className='px-7 py-1 border-l border-[#BEBEBE]' to="/Login"><p className='hover-underline-animation'>Login</p></Link>
       </div>
     </div>
     <div>
