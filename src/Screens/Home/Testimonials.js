@@ -8,7 +8,7 @@ import 'swiper/css';
 import Person from "../../Assets/Rectangle 26.png";
 const Testimonials = () => {
   return (
-    <>  <div className='mt-20'>
+    <>  <div className='mt-20' id='Testimonials'>
         <div className='w-full h-max text-center mb-16'>
             <div className='h-full w-full text-xl mb-4 font-bold text-[#ACAEB4]'>
                 Testimonials
