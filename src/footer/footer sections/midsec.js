@@ -8,7 +8,7 @@ import youtube from "../../Assets/Group 43.png"
 const Midsec = () => {
   return (
     <>
-        <div className='w-screen h-32 md:h-56 bg-black mt-32'>
+        <div className='w-screen h-32 md:h-56 bg-black'>
             <div className='h-full w-11/12 flex place-items-center justify-around'>
               <div>
                 <img alt='' src={logo}></img>

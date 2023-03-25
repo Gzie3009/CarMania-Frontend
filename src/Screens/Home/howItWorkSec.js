@@ -6,7 +6,7 @@ import Car from "../../Assets/car.png"
 const HowItWorkSec = () => {
   return (
     <>
-        <div className='w-full grid place-items-center mt-40 mb-36'>
+        <div className='w-full grid place-items-center mt-40 mb-36' id='HowToRent'>
         <div className='w-3/4 h-max text-center mb-16'>
             <div className='h-full w-full text-xl mb-4 font-bold text-[#ACAEB4]'>
                 How It Works
