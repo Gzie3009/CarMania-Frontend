@@ -1,11 +1,10 @@
 import React from 'react'
 import "./style.css"
-
 function ContactUs() {
   return (
     <>
-      <div className="contactUs">
-        <div className="title">
+      <div className="contactUs -mt-10">
+        <div className="title" id='contact'>
           <h2>Get In Touch</h2>
         </div>
         <div className="box">
@@ -17,29 +16,29 @@ function ContactUs() {
                 <div className="row50">
                   <div className="inputBox">
                     <span>First Name</span>
-                    <input type="text" placeholder="John" />
+                    <input className='rounded-lg' type="text" placeholder="John" />
                   </div>
-                  <div className="inputBox">
+                  <div className="inputBox ml-4">
                     <span>Last Name</span>
-                    <input type="text" placeholder="Doe" />
+                    <input className='rounded-lg' type="text" placeholder="Doe" />
                   </div>
                 </div>
 
                 <div className="row50">
                   <div className="inputBox">
                     <span>Email</span>
-                    <input type="text" placeholder="JohnDoe@gmail.com" />
+                    <input className='rounded-lg' type="text" placeholder="JohnDoe@gmail.com" />
                   </div>
-                  <div className="inputBox">
+                  <div className="inputBox ml-4">
                     <span>Mobile</span>
-                    <input type="text" placeholder="+91 8676453421" />
+                    <input className='rounded-lg' type="text" placeholder="+91 8676453421" />
                   </div>
                 </div>
 
                 <div className="row100">
                   <div className="inputBox">
                     <span>Message </span>
-                    <textarea placeholder="Write your Message here...."></textarea>
+                    <textarea className='rounded-lg' placeholder="Write your Message here...."></textarea>
                   </div>
                 </div>
 
@@ -77,7 +76,7 @@ function ContactUs() {
               <ul className="sci">
                 <li>
                   <a href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon icon="logo-facebook"></ion-icon>
                   </a>
                 </li>
                 <li>
@@ -98,13 +97,15 @@ function ContactUs() {
               </ul>
             </div>
           </div>
-
-          
+          <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.
+                4408161524093!2d77.08946781622258!3d28.496382273834666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                1!3m3!1m2!1s0x390d1937f1c4e509%3A0xaeb5f50538d6b4d1!2sInfinity%20Tower%20A!5e0!3m2!1sen!2sin!4v167
+                8053514873!5m2!1sen!2sin" width="600" height="450" style={{border:"0"}} allowfullscreen="" 
+                loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             </div>
         </div>
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </>
   )}
   export default ContactUs;

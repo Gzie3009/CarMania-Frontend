@@ -2,9 +2,10 @@
 
 .contactUs
 {
+    background: linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%);
     position: relative;
     width: 100%;
-    padding: 40px 100px;
+    padding: 40px;
 }
 .contactUs .title
 {
@@ -15,7 +16,7 @@
 }
 .contactUs .title h2
 {
-    color: #fff;
+    color:#0e3959;;
     font-weight: 500;
 }
 .form
@@ -33,7 +34,6 @@
 .contact
 {
     padding: 40px;
-    background: #fff;
     box-shadow: 0 5px 35px rgba(0,0, 0,0.15);
 }
 .box
