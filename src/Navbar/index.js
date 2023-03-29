@@ -18,8 +18,8 @@ const Navbar = () => {
       <div className='flex mt-8 font-semibold text-[#1D1E21]'>
         <Link className='px-7 py-1' to="/about"><p className='hover-underline-animation'>About Us</p></Link>
         <Link className='px-7 py-1' to="/contact"><p className='hover-underline-animation'>Contact Us</p></Link>
-        <a className='px-7 py-1' href="#HowToRent"><p className='hover-underline-animation'>How To Rent</p></a>
-        <a className='px-7 py-1' href="#Testimonials"><p className='hover-underline-animation'>Rent Now</p></a>
+        <a className='px-7 py-1' href="/#HowToRent"><p className='hover-underline-animation'>How To Rent</p></a>
+        <a className='px-7 py-1' href="/#Testimonials"><p className='hover-underline-animation'>Rent Now</p></a>
         <Link className='px-7 py-1 border-l border-[#BEBEBE]' to="/Login"><p className='hover-underline-animation'>Login</p></Link>
       </div>
     </div>
