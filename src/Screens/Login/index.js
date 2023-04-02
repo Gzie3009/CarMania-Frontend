@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
-
 import "./style.css"
+import { loginUser } from '../../store/slice/userSlice'
+import { useDispatch } from 'react-redux'
 const Login = () => {
-  const history=useNavigate()
+  const navigate=useNavigate()
+  const dispatch=useDispatch();
   const[email,setEmail]=useState("");
   const[password,setPassword]=useState("")
   const submitForm=async (e)=>{
@@ -19,11 +21,10 @@ const resp=await fetch("http://localhost:3010/users/signin",{
   body :JSON.stringify(user)
 })
 const data=await resp.json();
-console.log("data recieved",data.status)
      if(data.status===200){
         window.alert("login successfull");
-        console.log(data)
-        history("/")
+        dispatch(loginUser())
+        navigate("/")
      }
      else{
         window.alert("login unsuccessfull");

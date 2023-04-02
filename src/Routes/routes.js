@@ -9,20 +9,30 @@ import CheckOut from "../Screens/checkout-main";
 import Login from "../Screens/Login";
 import Signup from "../Screens/Signup";
 import About from "../Screens/about";
+import { useSelector } from "react-redux";
+import Error from "../Screens/error";
 const Routings = () => {
+  const data=useSelector((state)=>{
+    return state.users
+  })
   return (
     <>
         <Navbar/>
         <Routes>
-            <Route path="/" element={
-              <><Home/></>
-            }/>
+            <Route path="/" element={<Home/>}/>
             <Route path="/contact" element={<ContactUs/>}/>
-            <Route path="/checkout" element={<CheckOut/>}/>
-            <Route path="/payment" element={<PaymentCard/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="/about" element={<About/>}/>
+          {data&&(
+            <>
+              <Route path="payment" element={<PaymentCard />} />
+              <Route path="checkout" element={<CheckOut />} />
+            </>
+          )
+          }
+            <Route path="*" element={<Error/>}></Route>
+           
             
         </Routes>
         <Footer/>

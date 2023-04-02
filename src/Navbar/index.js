@@ -1,9 +1,21 @@
 import React, { useState } from 'react'
 import Logo from "../Assets/Logo.png"
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import './navbar.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { logoutUser } from '../store/slice/userSlice'
 const Navbar = () => {
+  const navigate=useNavigate()
   const [menuClick,setMenuClick]=useState(0);
+  const dispatch=useDispatch();
+  const data=useSelector((state)=>{
+    return state.users;
+  })
+  const handleLogout=()=>{
+    dispatch(logoutUser());
+    navigate("/")
+  }
+  console.log(data.auth)
 
   return (
     <>
@@ -20,7 +32,8 @@ const Navbar = () => {
         <Link className='px-7 py-1' to="/contact"><p className='hover-underline-animation'>Contact Us</p></Link>
         <a className='px-7 py-1' href="/#HowToRent"><p className='hover-underline-animation'>How To Rent</p></a>
         <Link className='px-7 py-1' to="/about"><p className='hover-underline-animation'>About Us</p></Link>
-        <Link className='px-7 py-1 border-l border-[#BEBEBE]' to="/Login"><p className='hover-underline-animation'>Login</p></Link>
+        {!data.auth?
+        <Link className='px-7 py-1 border-l border-[#BEBEBE]' to="/Login"><p className='hover-underline-animation'>Login / Sign Up</p></Link>:<Link onClick={handleLogout} className='px-7 py-1 border-l border-[#BEBEBE]' ><p className='hover-underline-animation'>Logout</p></Link>}
       </div>
     </div>
     <div>
