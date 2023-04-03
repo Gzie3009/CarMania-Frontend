@@ -135,7 +135,7 @@ const LUXURY=[{
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">PREMIUIM</h3>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{val.name}</h2>
-          <p class="leading-relaxed text-base">{val.cost} <span><Link className='ml-5 '>Book Now</Link></span></p>
+          <p class="leading-relaxed text-base">{val.cost} <span><Link className='ml-[5rem] bg-[#20BFB6] p-2 rounded-lg hover:text-black text-white font-bold '>Book Now</Link></span></p>
         </div>
       </div>
         )
@@ -157,7 +157,7 @@ const LUXURY=[{
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">LUXURY</h3>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{val.name}</h2>
-          <p class="leading-relaxed text-base">{val.cost} <span><Link className='ml-5 '>Book Now</Link></span></p>
+          <p class="leading-relaxed text-base">{val.cost} <span><Link className='ml-[5rem] bg-[#20BFB6] p-2 rounded-lg hover:text-black text-white font-bold '>Book Now</Link></span></p>
         </div>
       </div>
         )
