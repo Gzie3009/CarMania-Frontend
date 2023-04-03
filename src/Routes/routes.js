@@ -11,6 +11,7 @@ import Signup from "../Screens/Signup";
 import About from "../Screens/about";
 import { useSelector } from "react-redux";
 import Error from "../Screens/error";
+import Cars from "../Screens/cars section";
 const Routings = () => {
   const data=useSelector((state)=>{
     return state.users
@@ -28,6 +29,7 @@ const Routings = () => {
             <>
               <Route path="payment" element={<PaymentCard />} />
               <Route path="checkout" element={<CheckOut />} />
+              <Route path="cars" element={<Cars/>} />
             </>
           )
           }

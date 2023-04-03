@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import "./style.css"
 import { Link } from 'react-router-dom'
-import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Signup = () => {
     const history=useNavigate();
     const[name,setName]=useState("");
@@ -17,6 +18,7 @@ const Signup = () => {
     }
     const resp=await fetch("http://localhost:3010/users/register",{
       method:"POST",
+      mode:"cors",
       headers:{
         "Content-Type":"application/json"
       },
@@ -25,12 +27,12 @@ const Signup = () => {
     const data=await resp.json();
     console.log("data recieved",data.status)
          if(data.status===200){
-            window.alert("registration successfull");
+            toast("registration successfull");
             console.log(data)
             history("/login")
          }
          else{
-            window.alert("registration unsuccessfull");
+            toast("registration unsuccessfull");
          }
      }
 

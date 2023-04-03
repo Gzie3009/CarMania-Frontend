@@ -3,7 +3,13 @@ import { Link,useNavigate } from 'react-router-dom'
 import "./style.css"
 import { loginUser } from '../../store/slice/userSlice'
 import { useDispatch } from 'react-redux'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios'
 const Login = () => {
+  const expireTimeInSeconds = 1000*60*60*24*30; 
+const expireDate = new Date(expireTimeInSeconds * 1000);
+const expireDateFormatted = expireDate.toUTCString(); 
   const navigate=useNavigate()
   const dispatch=useDispatch();
   const[email,setEmail]=useState("");
@@ -21,13 +27,19 @@ const resp=await fetch("http://localhost:3010/users/signin",{
   body :JSON.stringify(user)
 })
 const data=await resp.json();
+console.log(data)
      if(data.status===200){
-        window.alert("login successfull");
+      toast('Logged In successfully', {
+        position: toast.POSITION.TOP_RIGHT
+    });
         dispatch(loginUser())
+        localStorage.setItem("JWT",data.token)
         navigate("/")
      }
      else{
-        window.alert("login unsuccessfull");
+        toast("login unsuccessfull");
+        setEmail("")
+        setPassword("")
      }
  }
   return (
@@ -48,10 +60,10 @@ const data=await resp.json();
                     <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password"/>
                 </div>
                 <span>New to Car Mania? </span><Link className='underline text-blue-500 decoration-blue-500' to={"/signup"}>Sign Up</Link><span> Now</span>
-                <div class="bg-[#3c00a0] text-white h-14 rounded-full grid place-items-center" onClick={submitForm}>
-                 <button type="border: none; ">Login</button> 
-                </div>
-        </form> 
+                <button class="bg-[#3c00a0] w-full text-white h-14 rounded-full grid place-items-center" onClick={submitForm}>
+                 <p type="border: none; ">Login</p> 
+                </button>
+        </form>
         
     </div>
     </div>

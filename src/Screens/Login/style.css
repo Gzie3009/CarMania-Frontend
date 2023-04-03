@@ -1,7 +1,7 @@
 .form-box{
     background-color:black;
     z-index: 10;
-    width: 90%;
+    width: 100%;
     max-width: 450px;
     transform: translate(-50%,50%);
     background: #fff;

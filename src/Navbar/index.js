@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Logo from "../Assets/Logo.png"
 import {Link, useNavigate} from "react-router-dom"
 import './navbar.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { logoutUser } from '../store/slice/userSlice'
+import { logoutUser,loginUser } from '../store/slice/userSlice'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
   const navigate=useNavigate()
   const [menuClick,setMenuClick]=useState(0);
@@ -13,10 +15,16 @@ const Navbar = () => {
   })
   const handleLogout=()=>{
     dispatch(logoutUser());
+    localStorage.removeItem("JWT")
+    toast("Logout Successfull")
     navigate("/")
   }
-  console.log(data.auth)
-
+  useEffect(() => {
+    const token=localStorage.getItem("JWT");
+    if(token){
+      dispatch(loginUser())
+    }
+  }, [])
   return (
     <>
     <div className='max-w-screen h-32' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
@@ -39,14 +47,14 @@ const Navbar = () => {
     <div>
     <div className='w-full h-full grid items-center md:hidden relative'>
     {menuClick?<>
-      <svg onClick={()=>{setMenuClick(0)}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      <svg onClick={()=>{setMenuClick(0)}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
 </svg>
 
     </>:
     <>
-    <svg onClick={()=>{setMenuClick(1)}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    <svg onClick={()=>{setMenuClick(1)}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
 
     </>}

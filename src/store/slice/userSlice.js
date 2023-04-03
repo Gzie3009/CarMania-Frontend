@@ -16,5 +16,4 @@ const userSlice=createSlice({
 
 })
 export default userSlice.reducer
-console.log("user",userSlice.actions)
 export const {loginUser,logoutUser}=userSlice.actions
