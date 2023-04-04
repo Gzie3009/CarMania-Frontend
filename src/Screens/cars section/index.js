@@ -1,40 +1,47 @@
-import React from 'react'
+import React, { useState ,useEffect} from 'react'
 import "./style.css"
-import eco1 from "./eco1.jpg"
-import eco2 from "./eco2.jpg"
-import eco3 from "./eco3.jpg"
-import eco4 from "./eco4.jpg"
-import sed1 from "./sed1.jpg"
-import sed2 from "./sed2.jpg"
-import suv1 from "./suv1.jpg"
-import suv2 from "./suv2.jpg"
-import lux1 from "./lux1.jpg"
-import lux2 from "./lux2.jpg"
-import lux3 from "./lux3.jpg"
-import lux4 from "./lux4.jpg"
+import car1 from "../../Assets/cars/car1.jpg"
+import car2 from "../../Assets/cars/car2.jpg"
+import car3 from "../../Assets/cars/car3.jpg"
+import car4 from "../../Assets/cars/car4.jpg"
+import car5 from "../../Assets/cars/car5.jpg"
+import car6 from "../../Assets/cars/car6.jpg"
+import car7 from "../../Assets/cars/car7.jpg"
+import car8 from "../../Assets/cars/car8.jpg"
+import car9 from "../../Assets/cars/car9.jpg"
+import car10 from "../../Assets/cars/car10.jpg"
+import car11 from "../../Assets/cars/car11.jpg"
+import car12 from "../../Assets/cars/car12.jpg"
 import { Link, useNavigate } from 'react-router-dom'
 const Cars = () => {
+  const [loading,setLoading]=useState(true);
+    useEffect(() => {
+        setTimeout(function(){
+            setLoading(false)
+        },500)
+    }, [])
+
   const navigate=useNavigate();
     const economy=[{
-        src:eco1,
+        src:car1,
         name:"2021 Swift Dzire",
         cost:"Rs 100/hr",
         link:"1"
        },
        {
-        src:eco2,
+        src:car2,
         name:"2020 Tata Tiago",
         cost:"Rs 150/hr",
         link:"2"
        },
        {
-        src:eco3,
+        src:car3,
         name:"2019 Suzuki Ertiga",
         cost:"Rs 250/hr",
         link:"3"
        },
        {
-        src:eco4,
+        src:car4,
         name:"2022 Hyundai Nios",
         cost:"Rs 200/hr",
         link:"4"
@@ -42,25 +49,25 @@ const Cars = () => {
        ];
 
 const premium=[{
-        src:sed1,
+        src:car5,
         name:"2022 BMW 320D",
         cost:"Rs 1700/hr",
         link:"5"
        },
        {
-        src:sed2,
+        src:car6,
         name:"2021 Mercedes C-class",
         cost:"Rs 2500/hr",
         link:"6"
        },
        {
-        src:suv1,
+        src:car7,
         name:"2020 Toyota Innova",
         cost:"Rs 1000/hr",
         link:"7"
        },
        {
-        src:suv2,
+        src:car8,
         name:"2022 Toyota Fortuner",
         cost:"Rs 1500/hr",
         link:"8"
@@ -68,34 +75,40 @@ const premium=[{
        ];
 
 const LUXURY=[{
-        src:lux1,
+        src:car9,
         name:"2023 Land Rover Vogue",
         cost:"Rs 7500/hr",
         link:"9"
        },
        {
-        src:lux2,
+        src:car10,
         name:"2022 Rollce Royce Phantom",
         cost:"Rs 12000/hr",
         link:"10"
        },
        {
-        src:lux3,
+        src:car11,
         name:"2021 Mercedes S-Class",
         cost:"Rs 5000/hr",
         link:"11"
        },
        {
-        src:lux4,
+        src:car12,
         name:"2020 Bentley Flying Spur",
         cost:"Rs 1000/hr",
         link:"12"
        },
        ];
-
+    const handleClick=(val)=>{
+          localStorage.setItem("prod",JSON.stringify(val))
+          navigate(`${val.link}`)
+       }
 
 
   return (
+    <>
+    {loading?<div className='w-[100vw] h-[60vh] pl-[46%] bg-[#F7F7FB]'><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>:
     <div className='' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
 <div class="text-gray-600 body-font w-full py-20" >
   <div class="px-5 mx-auto">
@@ -108,12 +121,15 @@ const LUXURY=[{
     <div  class="flex flex-wrap -m-4">
     {economy.map((val,id)=>{
         return(
-      <div key={id} onClick={()=>navigate(`/cars/${val.link}`)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">
+      <div key={id} onClick={()=>{
+        handleClick(val)
+      
+      }} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">
         <div class="bg-white p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class=" tracking-widest text-indigo-500 text-xs font-medium title-font">ECONOMY</h3>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{val.name}</h2>
-          <p class="leading-relaxed text-base">{val.cost} <span><Link className='ml-24 bg-[#20BFB6] p-2 rounded-lg hover:text-black text-white font-bold'>Book Now</Link></span></p>
+          <p class="leading-relaxed text-base">{val.cost} <span><button className='ml-24 bg-[#20BFB6] p-2 rounded-lg hover:text-black text-white font-bold'>Book Now</button></span></p>
         </div>
       </div>
         )
@@ -130,7 +146,7 @@ const LUXURY=[{
     <div  class="flex flex-wrap -m-4">
     {premium.map((val,id)=>{
         return(
-      <div key={id} onClick={()=>navigate(`/cars/${val.link}`)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">
+      <div key={id} onClick={()=>handleClick(val)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">
         <div class="bg-white p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">PREMIUIM</h3>
@@ -152,7 +168,7 @@ const LUXURY=[{
     <div  class="flex flex-wrap -m-4">
     {LUXURY.map((val,id)=>{
         return(
-      <div key={id} onClick={()=>navigate(`/cars/${val.link}`)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">
+      <div key={id} onClick={()=>handleClick(val)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">
         <div class="bg-white p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">LUXURY</h3>
@@ -168,6 +184,8 @@ const LUXURY=[{
   
 </div>
     </div>
+    }
+    </>
   )
 }
 

@@ -12,6 +12,7 @@ import About from "../Screens/about";
 import { useSelector } from "react-redux";
 import Error from "../Screens/error";
 import Cars from "../Screens/cars section";
+import ProductView from "../Screens/product view";
 const Routings = () => {
   const data=useSelector((state)=>{
     return state.users
@@ -25,12 +26,14 @@ const Routings = () => {
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="/about" element={<About/>}/>
+            <Route path="cars/:id" element={<ProductView/>}/>
           {data&&(
-            <>
+            <Route>
               <Route path="payment" element={<PaymentCard />} />
               <Route path="checkout" element={<CheckOut />} />
-              <Route path="cars" element={<Cars/>} />
-            </>
+              <Route path="cars" element={<Cars/>}>
+              </Route>
+            </Route>
           )
           }
             <Route path="*" element={<Error/>}></Route>
