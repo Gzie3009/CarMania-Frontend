@@ -1,6 +1,34 @@
-import React from 'react'
+import axios from 'axios'
+import React,{ useState } from 'react'
 import "./style.css"
 function ContactUs() {
+  const [message,setMessage]=useState({
+    name:"",
+    email:"",
+    phone:"",
+    message:""
+  })
+  const handleChange=(e)=>{
+    const {name,value}=e.target
+    setMessage({...message,[name]:value})
+  }
+  const handleSubmit=async (e)=>{
+    e.preventDefault()
+    const resp=await fetch("http://localhost:3010/users/contactus",{
+      method:"POST",
+  headers:{
+    "Content-Type":"application/json"
+  },
+  body :JSON.stringify(message)
+    })
+    const data=await resp.json();
+    if(data){
+      window.alert(data.message)
+    }
+    else{
+      window.alert("please try again")
+    }
+  }
   return (
     <>
       <div className="contactUs -mt-10">
@@ -11,40 +39,37 @@ function ContactUs() {
          
           <div className="contact form">
             <h3>Send a Message</h3>
-            <form>
+            <form method='POST'>
               <div className="formBox">
                 <div className="row50">
-                  <div className="inputBox">
-                    <span>First Name</span>
-                    <input className='rounded-lg' type="text" placeholder="John" />
-                  </div>
-                  <div className="inputBox ml-4">
-                    <span>Last Name</span>
-                    <input className='rounded-lg' type="text" placeholder="Doe" />
+                  <div className="w-full">
+                    <span className='text-purple-600'>Full Name</span>
+                    <div className='inputBox' style={{width:"100%"}}><input onChange={handleChange} value={message.name} className='rounded-lg border-2 border-black' name="name" type="text" placeholder="John"  /></div>
+                    
                   </div>
                 </div>
 
                 <div className="row50">
                   <div className="inputBox">
                     <span>Email</span>
-                    <input className='rounded-lg' type="text" placeholder="JohnDoe@gmail.com" />
+                    <input onChange={handleChange} value={message.email} className='rounded-lg' type="text" name="email" placeholder="JohnDoe@gmail.com" />
                   </div>
                   <div className="inputBox ml-4">
                     <span>Mobile</span>
-                    <input className='rounded-lg' type="text" placeholder="+91 8676453421" />
+                    <input onChange={handleChange} value={message.phone} className='rounded-lg' name="phone" type="text" placeholder="+91 8676453421" />
                   </div>
                 </div>
 
                 <div className="row100">
                   <div className="inputBox">
                     <span>Message </span>
-                    <textarea className='rounded-lg' placeholder="Write your Message here...."></textarea>
+                    <textarea className='rounded-lg' onChange={handleChange} value={message.message} name="message" placeholder="Write your Message here...."></textarea>
                   </div>
                 </div>
 
                 <div className="row100">
                   <div className="inputBox">
-                    <input type="Submit" />
+                    <button onClick={handleSubmit}>Submit</button>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,37 @@
+
+  .button{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    padding: 10px 24px;
+    text-align: center;
+    background-color:#20BFB6;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  main {
+      max-width: 1200px;
+      margin: 6rem auto 2rem;
+      padding: 0 1rem;
+  }
+  
+  #about-us {
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      padding: 2rem;
+  }
+  
+  #about-us h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+  }
+  
+  #about-us p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+  }
+  
