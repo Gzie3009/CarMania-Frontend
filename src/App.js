@@ -9,7 +9,7 @@ function App() {
     <div className='selection:bg-black selection:text-white overflow-x-hidden'>
     <Provider store={store}>
       <Routings></Routings>
-      <ToastContainer autoClose={1500}/>
+      <ToastContainer autoClose={2200}/>
     </Provider>
     </div>
   );

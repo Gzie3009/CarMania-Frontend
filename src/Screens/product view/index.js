@@ -23,7 +23,7 @@ const ProductView = () => {
             <div class="w-[40%]">
                 <h6> Category / Top-Rated</h6>
                 <h3 class="py-4">{car.name}</h3>
-                <h2 class="pt-2 pb-2">{car.cost}</h2>
+                <h2 class="pt-2 pb-2">Rs {car.cost}/hr</h2>
                 <Link to={"/checkout"} class="bg-[#20BFB6] p-3 px-5 rounded-lg hover:bg-[#8efaf4] hover:text-black text-white font-bold ">Rent Now</Link>
                 <h4 class="mt-5 mb-3">Car Details</h4>
                 <span>The all-new {car.name} has been inspired from Top notch design DNA of “sensuous sportiness” with a dynamic look on the outside & luxurious feeling on the inside. Its breathtaking presence casts a magnetic charm; while its connected and intuitive features enhance your comfort and convenience. Truly a class above the rest.</span>

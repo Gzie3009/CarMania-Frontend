@@ -25,25 +25,25 @@ const Cars = () => {
     const economy=[{
         src:car1,
         name:"2021 Swift Dzire",
-        cost:"Rs 100/hr",
+        cost:100,
         link:"1"
        },
        {
         src:car2,
         name:"2020 Tata Tiago",
-        cost:"Rs 150/hr",
+        cost: 150,
         link:"2"
        },
        {
         src:car3,
         name:"2019 Suzuki Ertiga",
-        cost:"Rs 250/hr",
+        cost: 250,
         link:"3"
        },
        {
         src:car4,
         name:"2022 Hyundai Nios",
-        cost:"Rs 200/hr",
+        cost: 200,
         link:"4"
        },
        ];
@@ -51,25 +51,25 @@ const Cars = () => {
 const premium=[{
         src:car5,
         name:"2022 BMW 320D",
-        cost:"Rs 1700/hr",
+        cost: 1700,
         link:"5"
        },
        {
         src:car6,
         name:"2021 Mercedes C-class",
-        cost:"Rs 2500/hr",
+        cost: 2500,
         link:"6"
        },
        {
         src:car7,
         name:"2020 Toyota Innova",
-        cost:"Rs 1000/hr",
+        cost: 1000,
         link:"7"
        },
        {
         src:car8,
         name:"2022 Toyota Fortuner",
-        cost:"Rs 1500/hr",
+        cost: 1500,
         link:"8"
        },
        ];
@@ -77,25 +77,25 @@ const premium=[{
 const LUXURY=[{
         src:car9,
         name:"2023 Land Rover Vogue",
-        cost:"Rs 7500/hr",
+        cost: 7500,
         link:"9"
        },
        {
         src:car10,
         name:"2022 Rollce Royce Phantom",
-        cost:"Rs 12000/hr",
+        cost: 12000,
         link:"10"
        },
        {
         src:car11,
         name:"2021 Mercedes S-Class",
-        cost:"Rs 5000/hr",
+        cost: 5000,
         link:"11"
        },
        {
         src:car12,
         name:"2020 Bentley Flying Spur",
-        cost:"Rs 1000/hr",
+        cost: 10000,
         link:"12"
        },
        ];
@@ -129,7 +129,7 @@ const LUXURY=[{
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class=" tracking-widest text-indigo-500 text-xs font-medium title-font">ECONOMY</h3>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{val.name}</h2>
-          <p class="leading-relaxed text-base">{val.cost} <span><button className='ml-24 bg-[#20BFB6] p-2 rounded-lg hover:text-black text-white font-bold'>Book Now</button></span></p>
+          <p class="leading-relaxed text-base">Rs {val.cost}/hr<span><button className='ml-24 bg-[#20BFB6] p-2 rounded-lg hover:text-black text-white font-bold'>Book Now</button></span></p>
         </div>
       </div>
         )
@@ -151,7 +151,7 @@ const LUXURY=[{
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">PREMIUIM</h3>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{val.name}</h2>
-          <p class="leading-relaxed text-base">{val.cost} <span><Link className='ml-[5rem] bg-[#20BFB6] p-2 rounded-lg hover:text-black text-white font-bold '>Book Now</Link></span></p>
+          <p class="leading-relaxed text-base">Rs {val.cost}/hr <span><button className='ml-[5rem] bg-[#20BFB6] p-2 rounded-lg hover:text-black text-white font-bold '>Book Now</button></span></p>
         </div>
       </div>
         )
@@ -173,7 +173,7 @@ const LUXURY=[{
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">LUXURY</h3>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{val.name}</h2>
-          <p class="leading-relaxed text-base">{val.cost} <span><Link className='ml-[5rem] bg-[#20BFB6] p-2 rounded-lg hover:text-black text-white font-bold '>Book Now</Link></span></p>
+          <p class="leading-relaxed text-base">Rs {val.cost}/hr <span><button className='ml-[5rem] bg-[#20BFB6] p-2 rounded-lg hover:text-black text-white font-bold '>Book Now</button></span></p>
         </div>
       </div>
         )
