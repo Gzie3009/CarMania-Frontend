@@ -34,6 +34,7 @@ console.log(data)
         position: toast.POSITION.TOP_RIGHT
     });
         dispatch(loginUser())
+        localStorage.setItem("email",email)
         localStorage.setItem("JWT",data.token)
         navigate("/")
      }
