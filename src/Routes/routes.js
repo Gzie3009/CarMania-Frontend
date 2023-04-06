@@ -29,12 +29,9 @@ const Routings = () => {
             <Route path="/about" element={<About/>}/>
             <Route path="cars/:id" element={<ProductView/>}/>
           {data&&(<>
-            <Route>
-              <Route path="payment" element={<PaymentCard />} />
-              <Route path="checkout" element={<CheckOut />} />
-              <Route path="cars" element={<Cars/>}>
-              </Route>
-            </Route>
+            <Route path="payment" element={<PaymentCard />} />
+            <Route path="checkout" element={<CheckOut />} />
+            <Route path="cars" element={<Cars/>}/>
             <Route path="/thankyou" element={<ThankYou/>}></Route>
             </>
           )

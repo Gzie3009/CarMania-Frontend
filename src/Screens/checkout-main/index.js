@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "./style.css"
+import "./styleCheckout.css"
 import { Link, useNavigate } from 'react-router-dom'
 const CheckOut = () => {
   const [loading,setLoading]=useState(true);
@@ -161,8 +161,8 @@ const CheckOut = () => {
             </div>
           </div>
         </div>
-        <div>
-        <button onClick={handleCLick} class="btn hover:text-black font-bold " style={{backgroud:"#20BFB6"}}>Continue</button>
+        <div className=''>
+        <button onClick={handleCLick} class="btn-checkout w-1/2 ml-64 rounded-lg p-5 mt-5 hover:text-black font-bold ">Continue</button>
         </div>
       </div>
       

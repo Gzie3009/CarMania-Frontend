@@ -38,7 +38,7 @@ const Signup = () => {
 
   return (
 
-    <div className='h-[90vh] w-screen' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+    <div className='h-[93vh] w-screen' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
 
 <div class="form-box">
         <h1>Sign up</h1>
@@ -66,9 +66,9 @@ const Signup = () => {
                     <input type="password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} placeholder="Confirm Password"/>
                 </div>
                 <span>Already Signed Up? </span><Link className='underline text-blue-500 decoration-blue-500' to={"/login"}>Login</Link><span> Now</span>
-                <div class="bg-[#3c00a0] text-white h-14 rounded-full grid place-items-center" onClick={submitForm}>
-                 <button type="border: none; ">Sign up</button> 
-                </div>
+                <button class="button-signup w-full hover:text-black bg-[#3c00a0] mt-5 text-white h-14 rounded-full grid place-items-center" onClick={submitForm}>
+                 <div type="border: none; ">Sign up</div> 
+                </button>
                 </div>
         </form> 
         
