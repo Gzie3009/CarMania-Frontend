@@ -16,6 +16,7 @@ function ContactUs() {
     e.preventDefault()
     const resp=await fetch("http://localhost:3010/users/contactus",{
       method:"POST",
+      mode:"cors",
   headers:{
     "Content-Type":"application/json"
   },

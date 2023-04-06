@@ -16,6 +16,10 @@ const Navbar = () => {
   const handleLogout=()=>{
     dispatch(logoutUser());
     localStorage.removeItem("JWT")
+    localStorage.removeItem("prod")
+    localStorage.removeItem("bookingData")
+    localStorage.removeItem("FinalPrice")
+    localStorage.removeItem("email")
     toast("Logout Successfull")
     navigate("/")
   }

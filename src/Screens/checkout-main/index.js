@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "./style.css"
+import "./styleCheckout.css"
 import { Link, useNavigate } from 'react-router-dom'
 const CheckOut = () => {
   const [loading,setLoading]=useState(true);
@@ -11,7 +11,7 @@ const CheckOut = () => {
         },1500)
     }, [])
   const navigate=useNavigate();
-    const [email,seteMail]=useState("");
+    const email=localStorage.getItem("email")
     const [phone,setPhone]=useState("");
     const [fname,setFname]=useState("");
     const [address,setAddress]=useState("");
@@ -24,11 +24,12 @@ const CheckOut = () => {
     const Cost=49+(hours*cardata.cost)
     const handleCLick=async ()=>{
       const data={
-        email,phone,fname,address,zipcode,start,end,Cost
+       phone,fname,address,zipcode,start,end,Cost
       }
       localStorage.setItem("FinalPrice",Cost)
       const res= await fetch("http://localhost:3010/users/checkout",{
         method:"POST",
+        mode:"cors",
         headers:{
           "Content-Type":"application/json"
         },
@@ -62,7 +63,7 @@ const CheckOut = () => {
               name="email"
               placeholder="Enter Your Email .. "
               value={email}
-              onChange={(e)=>seteMail(e.target.value)}
+              
             />
             <i class="fa-solid fa-envelope"></i>
           </div>
@@ -161,8 +162,8 @@ const CheckOut = () => {
             </div>
           </div>
         </div>
-        <div>
-        <button onClick={handleCLick} class="btn hover:text-black font-bold " style={{backgroud:"#20BFB6"}}>Continue</button>
+        <div className=''>
+        <button onClick={handleCLick} class="btn-checkout w-1/2 ml-64 rounded-lg p-5 mt-5 hover:text-black font-bold ">Continue</button>
         </div>
       </div>
       
