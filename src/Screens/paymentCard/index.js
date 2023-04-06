@@ -24,6 +24,7 @@ const PaymentCard = () => {
         }
         const res=await fetch("http://localhost:3010/users/payment",{
             method:"POST",
+            mode:"cors",
             headers:{
                 "Content-Type":"application/json"
             },

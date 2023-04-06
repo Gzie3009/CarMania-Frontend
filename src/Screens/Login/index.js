@@ -21,6 +21,7 @@ const expireDateFormatted = expireDate.toUTCString();
     }
 const resp=await fetch("http://localhost:3010/users/signin",{
   method:"POST",
+  mode:"cors",
   headers:{
     "Content-Type":"application/json"
   },
@@ -33,6 +34,7 @@ console.log(data)
         position: toast.POSITION.TOP_RIGHT
     });
         dispatch(loginUser())
+        localStorage.setItem("email",email)
         localStorage.setItem("JWT",data.token)
         navigate("/")
      }
@@ -59,7 +61,7 @@ console.log(data)
                     <i class="fa-solid fa-lock"></i>
                     <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password"/>
                 </div>
-                <span>New to Car Mania? </span><Link className='underline text-blue-500 decoration-blue-500' to={"/signup"}>Sign Up</Link><span> Now</span>
+                <span>New to Car Mania? </span><Link className='underline text-blue-500 decoration-blue-500 mt-5' to={"/signup"}>Sign Up</Link><span> Now</span>
                 <button class="bg-[#3c00a0] w-full text-white h-14 rounded-full grid place-items-center" onClick={submitForm}>
                  <p type="border: none; ">Login</p> 
                 </button>
