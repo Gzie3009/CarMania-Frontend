@@ -11,7 +11,7 @@ const CheckOut = () => {
         },1500)
     }, [])
   const navigate=useNavigate();
-    const email=localStorage.getItem("email")
+    const [email,setEmail]=useState("");
     const [phone,setPhone]=useState("");
     const [fname,setFname]=useState("");
     const [address,setAddress]=useState("");
@@ -24,7 +24,7 @@ const CheckOut = () => {
     const Cost=49+(hours*cardata.cost)
     const handleCLick=async ()=>{
       const data={
-       phone,fname,address,zipcode,start,end,Cost
+       email,phone,fname,address,zipcode,start,end,Cost
       }
       localStorage.setItem("FinalPrice",Cost)
       const res= await fetch("http://localhost:3010/users/checkout",{
@@ -63,7 +63,7 @@ const CheckOut = () => {
               name="email"
               placeholder="Enter Your Email .. "
               value={email}
-              
+              onChange={(e)=>setEmail(e.target.value)}
             />
             <i class="fa-solid fa-envelope"></i>
           </div>
