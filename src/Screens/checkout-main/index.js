@@ -27,7 +27,7 @@ const CheckOut = () => {
        email,phone,fname,address,zipcode,start,end,Cost
       }
       localStorage.setItem("FinalPrice",Cost)
-      const res= await fetch("http://localhost:3010/users/checkout",{
+      const res= await fetch("https://carmania-backend.onrender.com/users/checkout",{
         method:"POST",
         mode:"cors",
         headers:{

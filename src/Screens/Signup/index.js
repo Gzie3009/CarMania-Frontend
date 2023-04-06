@@ -16,7 +16,7 @@ const Signup = () => {
     const user={
         name,email,phone,password,confirmPassword
     }
-    const resp=await fetch("http://localhost:3010/users/register",{
+    const resp=await fetch("https://carmania-backend.onrender.com/users/register",{
       method:"POST",
       mode:"cors",
       headers:{
