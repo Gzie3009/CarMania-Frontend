@@ -7,9 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 const Login = () => {
-  const expireTimeInSeconds = 1000*60*60*24*30; 
-const expireDate = new Date(expireTimeInSeconds * 1000);
-const expireDateFormatted = expireDate.toUTCString(); 
   const navigate=useNavigate()
   const dispatch=useDispatch();
   const[email,setEmail]=useState("");
@@ -45,10 +42,10 @@ console.log(data)
      }
  }
   return (
-    <div className='w-full h-[65vh]' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
-
-    <div className=' w-screen pt-32'>
-        <div class="form-box">
+    <div className='w-full h-full' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+  
+    <div className='grid place-items-center w-screen pt-20 pb-32'>
+        <div class="form-boxx w-1/3">
         <h1>Login</h1>
         <form>
            

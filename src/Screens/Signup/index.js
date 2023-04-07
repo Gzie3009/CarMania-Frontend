@@ -38,7 +38,8 @@ const Signup = () => {
 
   return (
 
-    <div className='h-[93vh] w-screen' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+    <div className='h-full grid place-items-center' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+    <div className='pb-20 w-1/3'>
 
 <div class="form-box">
         <h1>Sign up</h1>
@@ -72,6 +73,7 @@ const Signup = () => {
                 </div>
         </form> 
         
+    </div>
     </div>
 </div>
   )
