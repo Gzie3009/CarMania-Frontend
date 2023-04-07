@@ -16,7 +16,7 @@ const Signup = () => {
     const user={
         name,email,phone,password,confirmPassword
     }
-    const resp=await fetch("http://localhost:3010/users/register",{
+    const resp=await fetch("https://carmania-backend.onrender.com/users/register",{
       method:"POST",
       mode:"cors",
       headers:{
@@ -38,7 +38,8 @@ const Signup = () => {
 
   return (
 
-    <div className='h-[93vh] w-screen' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+    <div className='h-full grid place-items-center' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+    <div className='pb-20 w-1/3'>
 
 <div class="form-box">
         <h1>Sign up</h1>
@@ -72,6 +73,7 @@ const Signup = () => {
                 </div>
         </form> 
         
+    </div>
     </div>
 </div>
   )

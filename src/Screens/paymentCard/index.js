@@ -22,7 +22,7 @@ const PaymentCard = () => {
         const data={
             cardNo,holderName,mm,yy,cvv
         }
-        const res=await fetch("http://localhost:3010/users/payment",{
+        const res=await fetch("https://carmania-backend.onrender.com/users/payment",{
             method:"POST",
             mode:"cors",
             headers:{

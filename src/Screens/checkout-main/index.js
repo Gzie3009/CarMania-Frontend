@@ -27,7 +27,7 @@ const CheckOut = () => {
        email,phone,fname,address,zipcode,start,end,Cost
       }
       localStorage.setItem("FinalPrice",Cost)
-      const res= await fetch("http://localhost:3010/users/checkout",{
+      const res= await fetch("https://carmania-backend.onrender.com/users/checkout",{
         method:"POST",
         mode:"cors",
         headers:{
@@ -48,8 +48,8 @@ const CheckOut = () => {
   return (
     <>{loading?<div className='w-[100vw] h-[60vh] pl-[46%] bg-[#F7F7FB]'><div class="lds-roller mt-32"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>:
-        <div class="con mb-56" style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
-      <div class="box1">
+        <div class="con" style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+      <div class=" box1">
         <h2 class="title">Checkout</h2>
       
         <div class="info" style={{"background":"transparent"}}>
@@ -163,7 +163,7 @@ const CheckOut = () => {
           </div>
         </div>
         <div className=''>
-        <button onClick={handleCLick} class="btn-checkout w-1/2 ml-64 rounded-lg p-5 mt-5 hover:text-black font-bold ">Continue</button>
+        <button onClick={handleCLick} class="lg:ml-56 md:ml-40 btn-checkout w-1/2 rounded-lg p-5 mt-5 hover:text-black font-bold ">Continue</button>
         </div>
       </div>
       

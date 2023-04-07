@@ -4,7 +4,7 @@ import "./style.css"
 import pic1 from "./pic2.png"
 const About = () => {
   return (
-        <div>
+        <div className='w-full'>
 		<div id="about-us">
 			<h1>Why choosing Us?</h1>
 			<p className=''>Our company was founded with a mission to provide affordable and reliable car rental services to people all over the world. We have a diverse fleet of cars to choose from, including compact cars, SUVs, luxury vehicles, and more at extremely affordable prices. Our website offers a user-friendly interface that makes it easy to search for and book the perfect rental car for your needs. Our team is made up of experienced professionals who are dedicated to providing exceptional customer service and making sure that every rental experience is a positive one.</p>

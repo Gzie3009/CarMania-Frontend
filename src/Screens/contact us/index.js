@@ -14,7 +14,7 @@ function ContactUs() {
   }
   const handleSubmit=async (e)=>{
     e.preventDefault()
-    const resp=await fetch("http://localhost:3010/users/contactus",{
+    const resp=await fetch("https://carmania-backend.onrender.com/users/contactus",{
       method:"POST",
       mode:"cors",
   headers:{

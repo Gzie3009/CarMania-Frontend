@@ -1,11 +1,6 @@
 
 .form-box{
-    margin-top: -300px;
-    width: 90%;
-    max-width: 450px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,50%);
+    transform: none;
     background: #fff;
     padding: 50px 60px 70px;
     text-align: center;
@@ -22,7 +17,6 @@
     height: 4px;
     border-radius: 3px;
     background: #3c00a0;
-    position: absolute;
     bottom: -12px;
     left :50%;
     transform : translateX(-50%);
@@ -46,20 +40,6 @@ input{
     margin-left: 15px;
     color:#999 ;
 }
-/* .btn-field{
-    width: 100%;
-}
-.btn-field button{
-    flex-basis:48%;
-    background: #3c00a0;
-    color: #fff;
-    height:40px;
-    border-radius:20px;
-    border:0;
-    outline:0;
-    cursor: pointer;
-    transition: background 1s;
-} */
 input-group{
      height: 280px;
 }

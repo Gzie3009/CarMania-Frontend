@@ -8,7 +8,7 @@ const Topsec = () => {
         <div className='w-screen h-max lg:realative' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
         <div className='flex lg:flex-row flex-col mx-20' >
             <div className='w-2/3 flex flex-col'>
-            <div className='lg:absolute w-full lg:w-1/2 left-36 font-semibold'>
+            <div className='lg:absolute w-full md:w-1/3 lg:w-1/2 left-36 font-semibold'>
                 <div className='text-7xl'>
                     Rent your favourite <p>
                     car 
