@@ -1,5 +1,4 @@
 import React, { useState ,useEffect} from 'react'
-import "./style.css"
 import car1 from "../../Assets/cars/car1.jpg"
 import car2 from "../../Assets/cars/car2.jpg"
 import car3 from "../../Assets/cars/car3.jpg"
@@ -109,16 +108,16 @@ const LUXURY=[{
     <>
     {loading?<div className='w-[100vw] h-[60vh] pl-[46%] bg-[#F7F7FB]'><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </div>:
-    <div className='' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+    <div style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
 <div class="text-gray-600 body-font w-full py-20" >
   <div class="px-5 mx-auto">
     <div class="flex flex-wrap w-full mb-5">
-      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">ECONOMY</h1>
-        <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+      <div class="grid place-items-center md:block lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl text-4xl font-medium title-font mb-2 text-gray-900">ECONOMY</h1>
+        <div class="h-1 w-full md:w-20 bg-indigo-500 rounded"></div>
       </div>
     </div>
-    <div  class="flex flex-wrap -m-4">
+    <div  class="ml-3 lg:ml-0 flex flex-wrap -m-4">
     {economy.map((val,id)=>{
         return(
       <div key={id} onClick={()=>{
@@ -138,12 +137,12 @@ const LUXURY=[{
 
 
     <div class="flex flex-wrap w-full mb-5 mt-20">
-      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+      <div class="grid place-items-center md:block lg:w-1/2 w-full mb-6 lg:mb-0">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">PREMIUIM</h1>
-        <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+        <div class="h-1 w-full md:w-20 bg-indigo-500 rounded"></div>
       </div>
     </div>
-    <div  class="flex flex-wrap -m-4">
+    <div  class="ml-3 lg:ml-0 flex flex-wrap -m-4">
     {premium.map((val,id)=>{
         return(
       <div key={id} onClick={()=>handleClick(val)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">
@@ -160,12 +159,12 @@ const LUXURY=[{
 
 
     <div class="flex flex-wrap w-full mb-5 mt-20">
-      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+      <div class="grid place-items-center md:block lg:w-1/2 w-full mb-6 lg:mb-0">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">LUXURY</h1>
-        <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+        <div class="h-1 w-full md:w-20 bg-indigo-500 rounded"></div>
       </div>
     </div>
-    <div  class="flex flex-wrap -m-4">
+    <div  class="ml-3 lg:ml-0  flex flex-wrap -m-4">
     {LUXURY.map((val,id)=>{
         return(
       <div key={id} onClick={()=>handleClick(val)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">

@@ -6,7 +6,7 @@ import store from './store';
 import { ToastContainer} from 'react-toastify';
 function App() {
   return (
-    <div className='selection:bg-black selection:text-white overflow-x-hidden'>
+    <div className='bg-white selection:bg-black selection:text-white overflow-x-hidden'>
     <Provider store={store}>
       <Routings></Routings>
       <ToastContainer autoClose={2200}/>

@@ -64,17 +64,20 @@ const Navbar = () => {
     </>}
   </div>
   {menuClick?<>
-    <div className='w-10/12 h-screen absolute bg-blue-400 left-0 top-0 shadow-2xl' style={{
+    <div className='w-10/12 h-screen absolute left-0 top-0 shadow-2xl text-4xl' style={{
     "background": "linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
     <div className='flex flex-col mt-6 font-semibold text-[#1D1E21]'>
         <Link to="/" className='grid items-center'>
-          <img src={Logo} alt='icon' className='h-32 lg:h-max w-56 '></img>
+          <img src={Logo} alt='icon' className='my-3 underline h-32 lg:h-max w-56 '></img>
         </Link>
-        <Link onClick={()=>setMenuClick(0)} className='hover:text-[#BEBEBE] px-5 py-1' to="#">Why Choose Us</Link>
-        <Link onClick={()=>setMenuClick(0)} className='hover:text-[#BEBEBE] px-5 py-1' to="#">How It Works</Link>
-        <Link onClick={()=>setMenuClick(0)} className='hover:text-[#BEBEBE] px-5 py-1' to="#">How To Rent</Link>
-        <Link onClick={()=>setMenuClick(0)} className='hover:text-[#BEBEBE] px-5 py-1' to="#">Book Now</Link>
-        <Link onClick={()=>setMenuClick(0)} className='hover:text-[#BEBEBE] px-5 py-1 border-l border-[#BEBEBE]' to="/Login">Login</Link>
+        <Link onClick={()=>setMenuClick(0)} to="/" className='my-3 underline hover:text-[#BEBEBE] px-5 py-1'>Home</Link>
+        <Link onClick={()=>setMenuClick(0)} to="/contact" className='my-3 underline hover:text-[#BEBEBE] px-5 py-1'>Contact Us</Link>
+        <Link onClick={()=>setMenuClick(0)} to="/#HowToRent" className='my-3 underline hover:text-[#BEBEBE] px-5 py-1'>How To Rent</Link>
+        <Link onClick={()=>setMenuClick(0)} to="/about" className='my-3 underline hover:text-[#BEBEBE] px-5 py-1'>About Us</Link>
+        {!data.auth?
+        <Link onClick={()=>setMenuClick(0)} className='my-3 underline hover:text-[#BEBEBE] px-5 py-1 border-l border-[#BEBEBE]' to="/Login">Login / Sign Up</Link>:<Link onClick={()=>{
+          handleLogout();
+          setMenuClick(0)}} className='my-3 underline hover:text-[#BEBEBE] px-5 py-1 border-l border-[#BEBEBE]'>Logout</Link>}
       </div>
     </div>
   </>:null}

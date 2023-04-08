@@ -46,7 +46,7 @@ const PaymentCard = () => {
     <>
     {loading?<div className='w-[100vw] h-[60vh] pl-[46%] bg-[#F7F7FB]'><div class="lds-roller mt-32"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div> :
-<div className='h-full w-full grid place-items-center' style={{"background": "linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+<div className='h-full md:w-full grid place-items-center pb-20' style={{"background": "linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
 <div class="container ">
 <div class="card-container">
     <div class="front">
@@ -54,8 +54,8 @@ const PaymentCard = () => {
             <img src={pic1} alt=""/>
             <img src={pic2} alt=""/>
         </div>
-        <div class="card-number-box">{cardNo===""?<>###############</>:<>{cardNo}</>}</div>
-        <div class="flexbox justify-between text-white">
+        <div class="card-number-box mt-10 md:mt-0 text-white">{cardNo===""?<>###############</>:<>{cardNo}</>}</div>
+        <div class="flexbox flex justify-between text-white md:-mt-5 mt-5">
             <div class="">
                 <span>CARD HOLDER</span>
                 <p>{holderName===""?<>Full Name</>:<>{holderName}</>}</p>
@@ -71,27 +71,27 @@ const PaymentCard = () => {
     </div>
 </div>
 
-<form>
+<form className='bg-black w-screen p-10 -ml-2.5'>
     <div class="inputBox">
         <span>card number</span>
-        <input type="text" maxlength="16" class="card-number-input bg-white" value={cardNo} onChange={(e)=>setCardNo(e.target.value)}/>
+        <input type="text" maxlength="16" className="rounded-lg card-number-input bg-white" value={cardNo} onChange={(e)=>setCardNo(e.target.value)}/>
     </div>
     <div class="inputBox">
         <span>card holder</span>
-        <input type="text" class="card-holder-input bg-white" value={holderName} onChange={(e)=>setHolder(e.target.value)}/>
+        <input type="text" className="rounded-lg card-holder-input bg-white" value={holderName} onChange={(e)=>setHolder(e.target.value)}/>
     </div>
     <div class="flexbox">
         <div class="inputBox">
             <span>expiration mm</span>
-            <input className='bg-white' placeholder='Month' value={mm===0?null:mm} onChange={(e)=>setMM(e.target.value)}></input>
+            <input className='rounded-lg bg-white' placeholder='Month' value={mm===0?null:mm} onChange={(e)=>setMM(e.target.value)}></input>
         </div>
         <div class="inputBox">
             <span>expiration yy</span>
-            <input className='bg-white'  placeholder='Year' value={yy} onChange={(e)=>{setYY(e.target.value)}}/>
+            <input className='rounded-lg bg-white'  placeholder='Year' value={yy} onChange={(e)=>{setYY(e.target.value)}}/>
         </div>
         <div class="inputBox">
             <span>cvv</span>
-            <input style={{"background":"white"}}  type="text" maxlength="4" class="cvv-input" value={cvv} onChange={(e)=>setCvv(e.target.value)}/>
+            <input style={{"background":"white"}}  type="text" maxlength="4" className="rounded-lg cvv-input" value={cvv} onChange={(e)=>setCvv(e.target.value)}/>
         </div>
     </div>
     <input onClick={handleClick} type="submit" value="submit" class="submit-btn"/>

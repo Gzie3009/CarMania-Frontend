@@ -55,7 +55,7 @@ function ContactUs() {
                     <span>Email</span>
                     <input onChange={handleChange} value={message.email} className='rounded-lg' type="text" name="email" placeholder="JohnDoe@gmail.com" />
                   </div>
-                  <div className="inputBox ml-4">
+                  <div className="inputBox md:ml-4">
                     <span>Mobile</span>
                     <input onChange={handleChange} value={message.phone} className='rounded-lg' name="phone" type="text" placeholder="+91 8676453421" />
                   </div>
