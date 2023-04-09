@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React,{ useState } from 'react'
 import "./style.css"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function ContactUs() {
   const [message,setMessage]=useState({
     name:"",
@@ -8,11 +10,13 @@ function ContactUs() {
     phone:"",
     message:""
   })
+  const [loading,setLoading]=useState(0)
   const handleChange=(e)=>{
     const {name,value}=e.target
     setMessage({...message,[name]:value})
   }
   const handleSubmit=async (e)=>{
+    setLoading(1)
     e.preventDefault()
     const resp=await fetch("https://carmania-backend.onrender.com/users/contactus",{
       method:"POST",
@@ -24,10 +28,18 @@ function ContactUs() {
     })
     const data=await resp.json();
     if(data){
-      window.alert(data.message)
+      setLoading(0)
+      toast("Message Sent Successfully")
+      setMessage({
+        name:"",
+        email:"",
+        phone:"",
+        message:""
+      })
     }
     else{
-      window.alert("please try again")
+      setLoading(0)
+      toast("please try again")
     }
   }
   return (
@@ -69,10 +81,18 @@ function ContactUs() {
                 </div>
 
                 <div className="row100">
+                {loading?
+                  <div className="inputBox bg-[#20BFB6] grid place-items-center">
+                  <div class="lds-dual-ring"></div>
+                  </div>
+                :
                   <div className="inputBox">
                     <button onClick={handleSubmit}>Submit</button>
-                  </div>
+                  </div>}
                 </div>
+
+
+
               </div>
             </form>
           </div>

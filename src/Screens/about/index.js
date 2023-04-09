@@ -2,8 +2,71 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./style.css"
 import pic1 from "./pic2.png"
+import ayush from "../../Assets/Team/ayush.jpeg"
+import mrinmoy from "../../Assets/Team/mrinmoy.jpeg"
+import nikhil from "../../Assets/Team/nikhil.jpeg"
+import sujal from "../../Assets/Team/sujal.jpeg"
+import rishit from "../../Assets/Team/rishit.jpeg"
+
 const About = () => {
-  return (
+  return (<>
+
+<section class="text-gray-600 body-font">
+  <div class="px-5 py-24 mx-auto">
+    <div class="flex flex-wrap w-full mb-20">
+      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Our Team</h1>
+        <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+      </div>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="xl:w-1/5 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-40 rounded w-full object-contain mb-6" src={nikhil} alt="content"/>
+          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Front-End Developer</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Nikhil Singh</h2>
+          <p class="leading-relaxed text-base">“If you think math is hard, try web design.”– Trish Parr</p>
+        </div>
+      </div>
+      <div class="xl:w-1/5 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-40 rounded w-full object-cover object-center mb-6" src={sujal} alt="content"/>
+          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">UI/UX Developer</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Sujal Kumar</h2>
+          <p class="leading-relaxed text-base">“People ignore design that ignores people.”— Frank Chimero</p>
+        </div>
+      </div>
+      <div class="xl:w-1/5 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-40 rounded w-full object-cover object-center mb-6" src={rishit} alt="content"/>
+          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Front-End Developer</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Rishit Chauhan</h2>
+          <p class="leading-relaxed text-base">“If debugging is the process of removing software bugs, then programming must be the process of putting them in”– Edsger Dijkstra</p>
+        </div>
+      </div>
+      <div class="xl:w-1/5 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-40 rounded w-full object-cover object-center mb-6" src={mrinmoy} alt="content"/>
+          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Full Stack Developer</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Mrinmoy Saikia</h2>
+          <p class="leading-relaxed text-base">“A website without visitors is like a ship lost in the horizon.”– Dr. Christopher Dayagdag</p>
+        </div>
+      </div>
+      <div class="xl:w-1/5 md:w-1/2 p-4">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <img class="h-40 rounded w-full object-cover object-center mb-6" src={ayush} alt="content"/>
+          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Mobile App Developer</h3>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Ayush Kr. Singh</h2>
+          <p class="leading-relaxed text-base">“It’s not a bug. It’s an undocumented feature!” -John Doe</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>        
+
+
+
+
         <div className='w-full'>
 		<div id="about-us">
 			<h1>Why choosing Us?</h1>
@@ -24,6 +87,7 @@ const About = () => {
 <Link>For further more details you can contact us by click on the given link: <Link to="/contact" class="button">Contact us</Link></Link>
 </div>
 </div>
+</>
     )
 }
 

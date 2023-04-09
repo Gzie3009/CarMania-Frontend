@@ -31,7 +31,7 @@ const Navbar = () => {
   }, [])
   return (
     <>
-    <div className='max-w-screen h-32' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+    <div className='fixed top-0 z-10 w-screen h-28' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
     <div className='lg:flex lg:mx-28 flex'>
     <div className='w-10/12 mt-6 md:mt-0 md:w-auto'>
       <Link to="/" className='grid items-center'>
@@ -64,16 +64,16 @@ const Navbar = () => {
     </>}
   </div>
   {menuClick?<>
-    <div className='w-10/12 h-screen absolute left-0 top-0 shadow-2xl text-4xl' style={{
+    <div className='w-10/12 h-screen absolute left-0 top-0 shadow-2xl text-2xl' style={{
     "background": "linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
     <div className='flex flex-col mt-6 font-semibold text-[#1D1E21]'>
         <Link to="/" className='grid items-center'>
           <img src={Logo} alt='icon' className='my-3 underline h-32 lg:h-max w-56 '></img>
         </Link>
-        <Link onClick={()=>setMenuClick(0)} to="/" className='my-3 underline hover:text-[#BEBEBE] px-5 py-1'>Home</Link>
-        <Link onClick={()=>setMenuClick(0)} to="/contact" className='my-3 underline hover:text-[#BEBEBE] px-5 py-1'>Contact Us</Link>
-        <Link onClick={()=>setMenuClick(0)} to="/#HowToRent" className='my-3 underline hover:text-[#BEBEBE] px-5 py-1'>How To Rent</Link>
-        <Link onClick={()=>setMenuClick(0)} to="/about" className='my-3 underline hover:text-[#BEBEBE] px-5 py-1'>About Us</Link>
+        <Link onClick={()=>setMenuClick(0)} to="/" className='my-3  hover:text-[#BEBEBE] px-5 py-1'>Home</Link>
+        <Link onClick={()=>setMenuClick(0)} to="/contact" className='my-3  hover:text-[#BEBEBE] px-5 py-1'>Contact Us</Link>
+        <Link onClick={()=>setMenuClick(0)} to="/#HowToRent" className='my-3  hover:text-[#BEBEBE] px-5 py-1'>How To Rent</Link>
+        <Link onClick={()=>setMenuClick(0)} to="/about" className='my-3  hover:text-[#BEBEBE] px-5 py-1'>About Us</Link>
         {!data.auth?
         <Link onClick={()=>setMenuClick(0)} className='my-3 underline hover:text-[#BEBEBE] px-5 py-1 border-l border-[#BEBEBE]' to="/Login">Login / Sign Up</Link>:<Link onClick={()=>{
           handleLogout();

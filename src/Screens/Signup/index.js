@@ -11,7 +11,9 @@ const Signup = () => {
     const[phone,setPhone]=useState("");
     const[password,setPassword]=useState("");
     const[confirmPassword,setConfirmPassword]=useState("")
+    const [loading,setLoading]=useState(0)
     const submitForm=async (e)=>{
+        setLoading(1);
         e.preventDefault();
     const user={
         name,email,phone,password,confirmPassword
@@ -32,6 +34,7 @@ const Signup = () => {
             history("/login")
          }
          else{
+            setLoading(0)
             toast("registration unsuccessfull");
          }
      }
@@ -67,9 +70,18 @@ const Signup = () => {
                     <input className='bg-[#eaeaea] px-12 py-5 rounded-sm border' type="password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} placeholder="Confirm Password"/>
                 </div>
                 <span>Already Signed Up? </span><Link className='underline text-blue-500 decoration-blue-500' to={"/login"}>Login</Link><span> Now</span>
+
+
+                {loading?<>
+                    <div class="button-signup w-full hover:text-black bg-[#3c00a0] mt-5 text-white h-14 rounded-full grid place-items-center">
+                    <div class="lds-dual-ring"></div>
+                </div></>:
                 <button class="button-signup w-full hover:text-black bg-[#3c00a0] mt-5 text-white h-14 rounded-full grid place-items-center" onClick={submitForm}>
                  <div type="border: none; ">Sign up</div> 
-                </button>
+                </button>}
+
+
+
                 </div>
         </form> 
         

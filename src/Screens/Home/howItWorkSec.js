@@ -8,14 +8,14 @@ const HowItWorkSec = () => {
     <>
         <div className='w-full grid place-items-center mt-40 mb-36' id='HowToRent'>
         <div className='w-3/4 h-max text-center mb-16'>
-            <div className='h-full w-full text-xl mb-4 font-bold text-[#ACAEB4]'>
+            <div className='h-full md:w-full text-xl mb-4 font-bold text-[#ACAEB4]'>
                 How It Works
             </div>
-            <div className='h-full w-full font-bold text-3xl'>
+            <div className='h-full md:w-full font-bold text-3xl'>
                 Rent your desired car with 3 working steps
             </div>
         </div>
-        <div className=' flex w-3/4 place-items-center gap-5'>
+        <div className=' flex flex-col md:flex-row w-3/4 place-items-center gap-5'>
             <div className='w-56 h-full grid place-items-center'>
             <div className='transition duration-300 ease-in-out hover:scale-110 rounded-3xl shadow-lg w-24 h-24 grid place-items-center'>
                 <div>
@@ -32,8 +32,8 @@ const HowItWorkSec = () => {
             </div>
 
 
-            <div className='mb-32'>
-                <img alt="" src={Line}>
+            <div className='mt-20 md:mt-0 mb-24 md:mb-32 '>
+                <img className='rotate-90 md:rotate-0' alt="" src={Line}>
                 </img>
             </div>
 
@@ -52,8 +52,8 @@ const HowItWorkSec = () => {
             </div>
 
 
-            <div className='mb-32'>
-                <img alt="" src={Line}>
+            <div className='mt-20 md:mt-0 mb-24 md:mb-32'>
+                <img className='rotate-90 md:rotate-0' alt="" src={Line}>
                 </img>
             </div>
 

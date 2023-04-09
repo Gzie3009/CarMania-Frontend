@@ -23,21 +23,21 @@ const Testimonials = () => {
                 What people say about us?
             </div>
         </div>
-        <div className='h-[60vh] w-full'>
+        <div className='w-full'>
         <Swiper className='w-full h-full' 
          modules={[Navigation, Pagination]}
-      slidesPerView={1}
+         slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
         >
             <SwiperSlide>
               <div className='grid place-items-center'>
-              <div className='h-[60vh] w-2/3 flex'>
-                <div className=''>
-                  <img className='w-84 h-96' alt="" src={sanket}></img>
+              <div className='w-full bg-blac md:pb-20 md:w-2/3 flex-col md:flex md:flex-row'>
+                <div className='grid place-items-center'>
+                  <img className='w-48 h-56 md:h-96 md:w-80 ' alt="" src={sanket}></img>
                 </div>
-                <div className='pl-24 h-3/4 w-2/3 text-4xl flex flex-col justify-between'>
+                <div className='p-10 md:pl-24 w-full md:w-2/3 text-xl md:text-4xl flex flex-col justify-between'>
                   <p className='font-light'>Carmania give the best car rental service at cheapest market price among kharar zone . The Customer service were also good 👍. I'will give 10/10 for their service</p>
                   <p className='mt-5 font-semibold'>Sanketh T, CEO @YouTube </p>
                   <p className='flex'>
@@ -64,11 +64,11 @@ const Testimonials = () => {
 
             <SwiperSlide>
               <div className='grid place-items-center'>
-              <div className='h-[60vh] w-2/3 flex'>
-                <div className=''>
-                  <img className='w-84 h-96' alt="" src={prashant}></img>
+              <div className='w-full bg-blac md:pb-20 md:w-2/3 flex-col md:flex md:flex-row'>
+                <div className='grid place-items-center'>
+                  <img className='w-48 h-56 md:h-96 md:w-80 ' alt="" src={prashant}></img>
                 </div>
-                <div className='pl-24 h-3/4 w-2/3 text-4xl flex flex-col justify-between'>
+                <div className="p-10 md:p-0 md:pl-24 w-full md:w-2/3 text-xl md:text-4xl flex flex-col justify-between">
                   <p className='font-light'>They offer well-maintained cars with Professionally Trained Chauffeurs to Corporate at suitable rates on premium and luxury car rental choices.</p>
                   <p className='mt-5 font-semibold'>Prashant Mishra , CEO @Mishra Pvt Ltd</p>
                   <p className='flex'>
@@ -94,11 +94,11 @@ const Testimonials = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className='grid place-items-center'>
-              <div className='h-[60vh] w-2/3 flex'>
-                <div className=''>
-                  <img className='w-84 h-96' alt="" src={dibyo}></img>
+              <div className='w-full bg-blac md:pb-20 md:w-2/3 flex-col md:flex md:flex-row'>
+                <div className='grid place-items-center'>
+                  <img className='w-48 h-56 md:h-96 md:w-80 ' alt="" src={dibyo}></img>
                 </div>
-                <div className='pl-24 h-3/4 w-2/3 text-4xl flex flex-col justify-between'>
+                <div className="p-10 md:p-0 md:pl-24 w-full md:w-2/3 text-xl md:text-4xl flex flex-col justify-between">
                   <p className='font-light'>They have Newer Cars, very clean( spotless ) and very comfortable. We had reserved mid-size car but got a great deal to upgrade SUV and it was worth it. Brand new Buick. We enjoyed the car we had....Thank you!</p>
                   <p className='mt-5 font-semibold'>Dibyo Dhara ,<br/> CEO @SeedIT Solutions</p>
                   <p className='flex'>
@@ -124,12 +124,12 @@ const Testimonials = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className='grid place-items-center'>
-              <div className='h-[60vh] w-2/3 flex'>
-                <div className=''>
-                  <img className='w-64 h-96' alt="" src={gaurav}></img>
+              <div className='w-full bg-blac md:pb-20 md:w-2/3 flex-col md:flex md:flex-row'>
+                <div className='grid place-items-center'>
+                  <img className='w-48 h-56 md:w-84 md:h-96 w-64 h-96' alt="" src={gaurav}></img>
                 </div>
-                <div className='pl-24 h-3/4 w-2/3 text-4xl flex flex-col justify-between'>
-                  <p className='font-light'>I recently rented a car from this company and was blown away by their excellent service. The car was clean and well-maintained, and the staff was friendly and helpful. I will definitely be using them again in the future!</p>
+                <div className="p-10 md:p-0 md:pl-24 w-full md:w-2/3 text-xl md:text-4xl flex flex-col justify-between">
+                  <p className='font-light'>I recently rented a car from Car Mania and was blown away by their excellent service. The car was clean and well-maintained, and the staff was friendly and helpful. I will definitely be using them again in the future!</p>
                   <p className='mt-5 font-semibold'>Gaurav Saini , CEO @Cadbury </p>
                   <p className='flex'>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -154,12 +154,12 @@ const Testimonials = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className='grid place-items-center'>
-              <div className='h-[60vh] w-2/3 flex'>
-                <div className=''>
-                  <img className='w-84 h-96' alt="" src={divyansh}></img>
+              <div className='w-full bg-blac md:pb-20 md:w-2/3 flex-col md:flex md:flex-row'>
+                <div className='grid place-items-center'>
+                  <img className='w-48 h-56 md:h-96 md:w-80 ' alt="" src={divyansh}></img>
                 </div>
-                <div className='pl-24 h-3/4 w-2/3 text-4xl flex flex-col justify-between'>
-                  <p className='font-light'>I highly recommend this car rental company! The staff was professional, knowledgeable, and friendly. The car I rented was clean and well-maintained, and the rental process was quick and easy. Overall, a great experience.</p>
+                <div className="p-10 md:p-0 md:pl-24 w-full md:w-2/3 text-xl md:text-4xl flex flex-col justify-between">
+                  <p className='font-light'>I highly recommend Car Mania! The staff was professional, knowledgeable, and friendly. The car I rented was clean and well-maintained, and the rental process was quick and easy. Overall, a great experience.</p>
                   <p className='mt-5 font-semibold'>Divyanash Bari , CEO @Groww </p>
                   <p className='flex'>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -184,12 +184,12 @@ const Testimonials = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className='grid place-items-center'>
-              <div className='h-[60vh] w-2/3 flex'>
-                <div className=''>
-                  <img className='w-84 h-96' alt="" src={ashutosh}></img>
+              <div className='w-full bg-blac md:pb-20 md:w-2/3 flex-col md:flex md:flex-row'>
+                <div className='grid place-items-center'>
+                  <img className='w-48 h-56 md:h-96 md:w-80 ' alt="" src={ashutosh}></img>
                 </div>
-                <div className='pl-24 h-3/4 w-2/3 text-4xl flex flex-col justify-between'>
-                  <p className='font-light'>We were extremely impressed with this car rental company . The staff was very knowledgeable and helpful, and the car I rented was in excellent condition. We would definitely recommend them to anyone in need of a rental car.</p>
+                <div className="p-10 md:p-0 md:pl-24 w-full md:w-2/3 text-xl md:text-4xl flex flex-col justify-between">
+                  <p className='font-light'>We were extremely impressed with Car Mania . The staff was very knowledgeable and helpful, and the car I rented was in excellent condition. We would definitely recommend them to anyone in need of a rental car.</p>
                   <p className='mt-5 font-semibold'>Mr. & Mrs. Dixit ,<br/>CEO @Shaadi.com </p>
                   <p className='flex'>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">

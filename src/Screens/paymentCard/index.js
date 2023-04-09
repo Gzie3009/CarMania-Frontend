@@ -17,7 +17,9 @@ const PaymentCard = () => {
     const [mm,setMM]=useState(5)
     const [yy,setYY]=useState(2023)
     const [cvv,setCvv]=useState("")
+    const [loading2,setLoading2]=useState(0);
     const handleClick=async (e)=>{
+        setLoading2(1)
         e.preventDefault()
         const data={
             cardNo,holderName,mm,yy,cvv
@@ -38,7 +40,9 @@ const PaymentCard = () => {
             navigate("/thankyou")
         }
         else{
-            toast(resp.message)
+
+        setLoading2(0)
+            toast("Fill Proper Card Details")
         }
     }
   return (
@@ -94,7 +98,10 @@ const PaymentCard = () => {
             <input style={{"background":"white"}}  type="text" maxlength="4" className="rounded-lg cvv-input" value={cvv} onChange={(e)=>setCvv(e.target.value)}/>
         </div>
     </div>
-    <input onClick={handleClick} type="submit" value="submit" class="submit-btn"/>
+    {loading2? 
+    <div className='submit-btn'><div className='grid place-items-center'><div class="lds-dual-ring"></div></div></div>
+    :
+    <input onClick={handleClick} type="submit" value="submit" class="submit-btn"/>}
 </form>
 </div>
 

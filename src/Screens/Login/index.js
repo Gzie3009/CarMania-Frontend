@@ -11,7 +11,9 @@ const Login = () => {
   const dispatch=useDispatch();
   const[email,setEmail]=useState("");
   const[password,setPassword]=useState("")
+  const [loading,setLoading]=useState(0)
   const submitForm=async (e)=>{
+    setLoading(1)
     e.preventDefault();
     const user={
         email,password
@@ -36,6 +38,7 @@ console.log(data)
         navigate("/")
      }
      else{
+        setLoading(0)
         toast("login unsuccessfull");
         setEmail("")
         setPassword("")
@@ -50,16 +53,24 @@ console.log(data)
         <form className=''>
                 <div class="input-field">
                     <i class="fa-solid fa-envelope"></i>
-                    <input className='p-5 my-3 text-2xl' type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Email"/>
+                    <input className='p-5 my-3 md:my-0 text-2xl' type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Email"/>
                 </div>
                 <div class="input-field">
                     <i class="fa-solid fa-lock"></i>
-                    <input className='p-5 my-3 text-2xl' type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password"/>
+                    <input className='p-5 my-3 md:my-0 text-2xl' type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password"/>
                 </div>
                 <span>New to Car Mania? </span><Link className='underline text-blue-500 decoration-blue-500 mt-5' to={"/signup"}>Sign Up</Link><span> Now</span>
+
+
+                {loading?
+                  <div class="bg-[#3c00a0] w-full text-white h-14 rounded-full grid place-items-center my-4">
+                  <div class="lds-dual-ring ml-5"></div>
+                </div>
+                :
                 <button class="bg-[#3c00a0] w-full text-white h-14 rounded-full grid place-items-center my-4" onClick={submitForm}>
                  <p type="border: none; ">Login</p> 
                 </button>
+                }
         </form>
         
     </div>
