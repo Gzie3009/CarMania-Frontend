@@ -24,9 +24,9 @@ const ProductView = () => {
                 <h6 className='text-4xl md:text-2xl'> Category / Top-Rated</h6>
                 <h3 class="py-4 text-3xl">{car.name}</h3>
                 <h2 class="pt-2 pb-2 text-2xl">Rs {car.cost}/hr</h2>
-                <div className='md:hidden block w-full grid place-items-center bg-[#20BFB6] p-3 px-5 hover:bg-[#8efaf4] hover:text-black text-white font-bold'>
-                <Link to={"/checkout"} className="">Rent Now</Link>
-                </div>
+                <Link to={"/checkout"} className='md:hidden block w-full grid place-items-center bg-[#20BFB6] p-3 px-5 hover:bg-[#8efaf4] hover:text-black text-white font-bold'>
+                <div  className="">Rent Now</div>
+                </Link>
                 <div>
                 <h4 class="mb-3 text-3xl mt-10 md:mt-0">Car Details</h4>
                 </div>
