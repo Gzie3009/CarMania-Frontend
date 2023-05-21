@@ -16,11 +16,11 @@ const ProductView = () => {
         {loading?<div className='w-[100vw] h-[60vh] pl-[46%] bg-[#F7F7FB]'><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </div>:<section class="xxx pt-5 w-[100vw] h-[60vh] grid place-items-center bg-[#F7F7FB]">
         <div class=" w-full flex gap-20 product">
-            <div class="rounded-lg ml-20 w-[40%]">
+            <div class="rounded-lg ml-20 w-[40%]" data-aos="flip-left">
                 <img class="w-full pb-1" src={car.src} id="MainImg" alt="loading img....."/>
             </div>
 
-            <div class="w-[40%]">
+            <div class="w-[40%]" data-aos="flip-right">
                 <h6> Category / Top-Rated</h6>
                 <h3 class="py-4">{car.name}</h3>
                 <h2 class="pt-2 pb-2">Rs {car.cost}/hr</h2>
