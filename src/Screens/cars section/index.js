@@ -112,7 +112,7 @@ const LUXURY=[{
     <div className='' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
 <div class="text-gray-600 body-font w-full py-20" >
   <div class="px-5 mx-auto">
-    <div class="flex flex-wrap w-full mb-5">
+    <div class="flex flex-wrap w-full mb-5" data-aos="fade-right">
       <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">ECONOMY</h1>
         <div class="h-1 w-20 bg-indigo-500 rounded"></div>
@@ -125,7 +125,7 @@ const LUXURY=[{
         handleClick(val)
       
       }} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">
-        <div class="bg-white p-6 rounded-lg">
+        <div class="bg-white p-6 rounded-lg" data-aos="fade-right">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class=" tracking-widest text-indigo-500 text-xs font-medium title-font">ECONOMY</h3>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{val.name}</h2>
@@ -138,7 +138,7 @@ const LUXURY=[{
 
 
     <div class="flex flex-wrap w-full mb-5 mt-20">
-      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+      <div class="lg:w-1/2 w-full mb-6 lg:mb-0" data-aos="fade-right">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">PREMIUIM</h1>
         <div class="h-1 w-20 bg-indigo-500 rounded"></div>
       </div>
@@ -146,7 +146,7 @@ const LUXURY=[{
     <div  class="flex flex-wrap -m-4">
     {premium.map((val,id)=>{
         return(
-      <div key={id} onClick={()=>handleClick(val)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">
+      <div key={id} onClick={()=>handleClick(val)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer" data-aos="fade-right">
         <div class="bg-white p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">PREMIUIM</h3>
@@ -160,7 +160,7 @@ const LUXURY=[{
 
 
     <div class="flex flex-wrap w-full mb-5 mt-20">
-      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+      <div class="lg:w-1/2 w-full mb-6 lg:mb-0" data-aos="fade-right">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">LUXURY</h1>
         <div class="h-1 w-20 bg-indigo-500 rounded"></div>
       </div>
@@ -168,7 +168,7 @@ const LUXURY=[{
     <div  class="flex flex-wrap -m-4">
     {LUXURY.map((val,id)=>{
         return(
-      <div key={id} onClick={()=>handleClick(val)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer">
+      <div key={id} onClick={()=>handleClick(val)} class="xl:w-1/4 md:w-1/2 p-4 hover:cursor-pointer" data-aos="fade-right">
         <div class="bg-white p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={val.src} alt="content"/>
           <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">LUXURY</h3>
