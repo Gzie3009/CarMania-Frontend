@@ -48,7 +48,7 @@ const CheckOut = () => {
   return (
     <>{loading?<div className='w-[100vw] h-[60vh] pl-[46%] bg-[#F7F7FB]'><div class="lds-roller mt-32"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>:
-        <div class="con" style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+        <div class="conxx flex-col md:flex-row" style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
       <div class=" box1">
         <h2 class="title">Checkout</h2>
       
@@ -162,9 +162,8 @@ const CheckOut = () => {
             </div>
           </div>
         </div>
-        <div className=''>
-        <button onClick={handleCLick} class="lg:ml-56 md:ml-40 btn-checkout w-1/2 rounded-lg p-5 mt-5 hover:text-black font-bold ">Continue</button>
-        </div>
+       
+        <button onClick={handleCLick} class="w-full btn-checkout rounded-lg p-5 mt-5 hover:text-black font-bold ">Continue</button>
       </div>
       
     </div>
