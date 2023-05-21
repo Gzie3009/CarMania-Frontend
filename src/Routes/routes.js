@@ -21,6 +21,7 @@ const Routings = () => {
   return (
     <>
         <Navbar/>
+        <div className="mt-28">
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/contact" element={<ContactUs/>}/>
@@ -40,6 +41,7 @@ const Routings = () => {
            
             
         </Routes>
+        </div>
         <Footer/>
         
     </>

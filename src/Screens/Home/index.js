@@ -7,14 +7,14 @@ import WhyChooseUs from './whyChooseUs';
 import Testimonials from './Testimonials';
 const Home = () => {
   return (
-    <>
+    <div>
       <Topsec/>
       <Detailsec/>
       <CarLogoSec/>
       <HowItWorkSec/>
       <WhyChooseUs/>
       <Testimonials/>
-    </>
+    </div>
   )
 }
 

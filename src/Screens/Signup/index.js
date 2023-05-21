@@ -11,7 +11,9 @@ const Signup = () => {
     const[phone,setPhone]=useState("");
     const[password,setPassword]=useState("");
     const[confirmPassword,setConfirmPassword]=useState("")
+    const [loading,setLoading]=useState(0)
     const submitForm=async (e)=>{
+        setLoading(1);
         e.preventDefault();
     const user={
         name,email,phone,password,confirmPassword
@@ -32,44 +34,54 @@ const Signup = () => {
             history("/login")
          }
          else{
+            setLoading(0)
             toast("registration unsuccessfull");
          }
      }
 
   return (
 
-    <div className='h-full grid place-items-center' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
-    <div className='pb-20 w-1/3'>
+    <div className='h-full pb-10 grid place-items-center' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
+    <div className='bg-white p-10 md:p-0 md:pb-20 md:w-1/3'>
 
 <div class="form-box">
-        <h1>Sign up</h1>
+        <h1 className=' md:font-2xl'>Sign up</h1>
         <form method='POST'>
             <div class="input-group">
-                <div class="input-field">
+                <div class="input-field my-3">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Name"/>
+                    <input className='bg-[#eaeaea] px-12 py-5 rounded-sm border' type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Name"/>
                 </div>
 
-                <div class="input-field">
+                <div class="input-field my-3">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Email"/>
+                    <input className='bg-[#eaeaea] px-12 py-5 rounded-sm border' type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Email"/>
                 </div>
-                <div class="input-field">
+                <div class="input-field my-3">
                     <i class="fa-sharp fa-solid fa-phone"></i>
-                    <input type="phone" value={phone} onChange={(e)=>setPhone(e.target.value)} placeholder="Phone Number"/>
+                    <input className='bg-[#eaeaea] px-12 py-5 rounded-sm border' type="phone" value={phone} onChange={(e)=>setPhone(e.target.value)} placeholder="Phone Number"/>
                 </div>
-                <div class="input-field">
+                <div class="input-field my-3">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password"/>
+                    <input className='bg-[#eaeaea] px-12 py-5 rounded-sm border' type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password"/>
                 </div>
-                <div class="input-field">
+                <div class="input-field my-3">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} placeholder="Confirm Password"/>
+                    <input className='bg-[#eaeaea] px-12 py-5 rounded-sm border' type="password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} placeholder="Confirm Password"/>
                 </div>
                 <span>Already Signed Up? </span><Link className='underline text-blue-500 decoration-blue-500' to={"/login"}>Login</Link><span> Now</span>
+
+
+                {loading?<>
+                    <div class="button-signup w-full hover:text-black bg-[#3c00a0] mt-5 text-white h-14 rounded-full grid place-items-center">
+                    <div class="lds-dual-ring"></div>
+                </div></>:
                 <button class="button-signup w-full hover:text-black bg-[#3c00a0] mt-5 text-white h-14 rounded-full grid place-items-center" onClick={submitForm}>
                  <div type="border: none; ">Sign up</div> 
-                </button>
+                </button>}
+
+
+
                 </div>
         </form> 
         
