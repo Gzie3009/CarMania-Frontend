@@ -15,7 +15,7 @@ import ashutosh from "../../Assets/testimonial/ashutosh.jpeg";
 const Testimonials = () => {
   return (
     <>  <div className='mt-20 mb-20' id='Testimonials'>
-        <div className='w-full text-center mb-16'>
+        <div className='w-full text-center mb-16' data-aos="fade-up">
             <div className='h-full w-full text-xl mb-4 font-bold text-[#ACAEB4]'>
                 Testimonials
             </div>
@@ -23,7 +23,7 @@ const Testimonials = () => {
                 What people say about us?
             </div>
         </div>
-        <div className='h-[60vh] w-full'>
+        <div className='h-[60vh] w-full' data-aos="fade-up">
         <Swiper className='w-full h-full' 
          modules={[Navigation, Pagination]}
       slidesPerView={1}

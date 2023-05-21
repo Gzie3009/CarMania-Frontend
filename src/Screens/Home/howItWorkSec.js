@@ -7,7 +7,7 @@ const HowItWorkSec = () => {
   return (
     <>
         <div className='w-full grid place-items-center mt-40 mb-36' id='HowToRent'>
-        <div className='w-3/4 h-max text-center mb-16'>
+        <div className='w-3/4 h-max text-center mb-16' data-aos="fade-up">
             <div className='h-full w-full text-xl mb-4 font-bold text-[#ACAEB4]'>
                 How It Works
             </div>
@@ -15,7 +15,7 @@ const HowItWorkSec = () => {
                 Rent your desired car with 3 working steps
             </div>
         </div>
-        <div className=' flex w-3/4 place-items-center gap-5'>
+        <div className=' flex w-3/4 place-items-center gap-5' data-aos="fade-up">
             <div className='w-56 h-full grid place-items-center'>
             <div className='transition duration-300 ease-in-out hover:scale-110 rounded-3xl shadow-lg w-24 h-24 grid place-items-center'>
                 <div>
