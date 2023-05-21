@@ -48,43 +48,12 @@ const CheckOut = () => {
         toast("Fill Details Properly")
 
       }
-    );
-    const resp = await res.json();
-    if (resp.status == 200) {
-      navigate("/payment");
-    } else {
-      toast("Fill details properly");
     }
-    
-    
-  return (
-    <>{loading?<div className='w-[100vw] h-[60vh] pl-[46%] bg-[#F7F7FB]'><div class="lds-roller mt-32"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    </div>:
-    <>
-      <div className='hidden md:block'>
-        <div class="con" style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
-      <div class=" box1">
-        <h2 class="title">Checkout</h2>
-      
-        <div class="info" style={{"background":"transparent"}}>
-          <h3>Contact information</h3>
 
-          <p class="label">E-mail</p>
-
-          <div class="input-box">
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter Your Email .. "
-              value={email}
-              onChange={(e)=>setEmail(e.target.value)}
-            />
-            <i class="fa-solid fa-envelope"></i>
-          </div>
 
   return (
     <>
-      {loading ? (
+      {loading ? 
         <div className="w-[100vw] h-[60vh] pl-[46%] bg-[#F7F7FB]">
           <div class="lds-roller mt-32">
             <div></div>
@@ -97,7 +66,7 @@ const CheckOut = () => {
             <div></div>
           </div>
         </div>
-      ) : (
+       : 
         <div
           class="conxx flex-col md:flex-row"
           style={{
@@ -245,16 +214,7 @@ const CheckOut = () => {
               </div>
             </div>
 
-            <button
-              onClick={handleCLick}
-              class="w-full btn-checkout rounded-lg p-5 mt-5 hover:text-black font-bold " data-aos="zoom-in-up"
-            >
-              Continue
-            </button>
-          </div>
-        </div>
-
-        {loading2?
+            {loading2?
           <div className=''>
         <button class="lg:ml-56 md:ml-40 btn-checkout w-1/2 h-20 grid place-items-center rounded-lg p-5 mt-5 hover:text-black font-bold ">
         <div class="lds-dual-ring"></div>
@@ -262,165 +222,13 @@ const CheckOut = () => {
         </div>
         :
         <div className=''>
-        <button onClick={handleCLick} class="lg:ml-56 md:ml-40 btn-checkout w-1/2 rounded-lg p-5 mt-5 hover:text-black font-bold ">Continue</button>
+        <button onClick={handleCLick} class="w-full btn-checkout rounded-lg p-5 mt-5 hover:text-black font-bold " data-aos="zoom-in-up">Continue</button>
         </div>}
-      </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="block md:hidden px-10" style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
-      <div class=" box1">
-        <h2 class="title">Checkout</h2>
-      
-        <div class="info" style={{"background":"transparent"}}>
-          <h3>Contact information</h3>
-
-          <p class="label">E-mail</p>
-
-          <div class="input-box">
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter Your Email .. "
-              value={email}
-              onChange={(e)=>setEmail(e.target.value)}
-            />
-            <i class="fa-solid fa-envelope"></i>
-          </div>
-
-          <p class="label">Phone</p>
-
-          <div class="input-box">
-            <input
-              type="text"
-              name="phone"
-              placeholder="Enter Your Phone .. "
-              value={phone}
-              onChange={(e)=>setPhone(e.target.value)}
-            />
-            <i class="fa-solid fa-phone"></i>
           </div>
         </div>
-        
-
-        
-        <div class="shipping">
-          <h3>Shipping address</h3>
-
-          <p class="label">Full name</p>
-
-          <div class="input-box">
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter Your Fullname .. "
-              value={fname}
-              onChange={(e)=>setFname(e.target.value)}
-            />
-            <i class="fa-solid fa-user"></i>
-          </div>
-
-          <p class="label">Address</p>
-
-          <div class="input-box">
-            <input type="text" name="address" placeholder="Your Address .. "  value={address}
-              onChange={(e)=>setAddress(e.target.value)} />
-            <i class="fa-solid fa-house"></i>
-          </div>
-
-
-         
-
-          <div class="last">
-            <div class="separate">
-              <p class="label">Postal code</p>
-
-              <div class="input-box">
-                <input
-                  type="number"
-                  name="code"
-                  placeholder="Your Postal Code .. "
-                  value={zipcode}
-              onChange={(e)=>setZip(e.target.value)}
-                />
-                <i class="fa-solid fa-envelopes-bulk"></i>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      
-      </div>
-      
-
-     
-      <div class="box2 -mt-80 py-10">
-        <div class="card">
-          <div class="item">
-            <img src={cardata.src} className="" alt="loading..." />
-            <div class="count">
-              <p class="item-name">{cardata.name}</p>
-              <h6 class="price">₹ {cardata.cost}/hr</h6>
-              
-            </div>
-          </div>
-          
-          <div class="end">
-          <div class="total">
-              <p>From :<span className='ml-5'>{bookDetails.date1}</span><br className='block md:hidden'/><span className=''>To :</span><span className='ml-5'> {bookDetails.date2}</span></p>
-            </div>
-            <hr className='w-full'/>
-            <div class="total">
-              <p>Shipping</p>
-              <p>₹ 49</p>
-            </div>
-            <hr className='w-full'/>
-
-            <div class="total">
-              <p>Total</p>
-              <p>₹ {Cost}</p>
-            </div>
-          </div>
-        </div>
-
-
-        {loading2?
-          <div className=''>
-        <button class="lg:ml-56 md:ml-40 btn-checkout w-full h-20 grid place-items-center rounded-lg p-5 mt-5 hover:text-black font-bold ">
-        <div class="lds-dual-ring"></div>
-        </button>
-        </div>
-        :
-        <div className=''>
-        <button onClick={handleCLick} class="lg:ml-56 md:ml-40  w-full rounded-lg p-5 mt-5 hover:text-black font-bold ">Continue</button>
-        </div>}
-      </div>
-      
-    </div>
-
-
-    </>}
-    </>
+      }
+      </>
   );
-};
+}
 
-export default CheckOut;
+export default CheckOut
