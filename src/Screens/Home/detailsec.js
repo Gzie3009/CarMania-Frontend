@@ -44,7 +44,7 @@ const Detailsec = () => {
     <>  <div className='relative'>
         <div className='h-20 ' style={{"background":" linear-gradient(283.63deg, #F1F3FC 0%, #F7F7FB 100%)"}}>
         </div>
-        <div className='h-20 w-full absolute top-10'>
+        <div className='h-20 w-full absolute top-10' data-aos="fade-right">
         <div className=' flex bg-white h-full mx-32 rounded-2xl shadow-lg'>
 
         <div className='h-full w-2/5 grid place-items-center border rounded-l-2xl'>
