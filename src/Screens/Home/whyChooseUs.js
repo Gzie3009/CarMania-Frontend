@@ -8,7 +8,7 @@ const WhyChooseUs = () => {
   return (
     <>
       <div className='w-full h-[90vh]' style={{"background": "linear-gradient(270deg, #FAFAFA 0%, rgba(250, 250, 250, 0) 203.13%)"}}>
-          <div className='flex mx-32 pb-10'>
+          <div className='flex mx-32 pb-10' data-aos="fade-up">
             <div className='w-1/2 h-full'>
             <img alt="" className='h-10/12 bg-transparent' src={CarWithMap}></img>
             </div>
