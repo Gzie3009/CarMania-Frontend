@@ -11,27 +11,34 @@ const Detailsec = () => {
     const [date2,setDate2]=useState("");
     const start=new Date(date1);
     const end=new Date(date2)
+    const today = new Date();
     const hours= (end-start)/3600000;
     const handleClick=()=>{
         if(data.auth){
-            if(hours>0){
-            if(city && date1 && date2){
-                const bookingData={
-                    city,date1,date2
+            if(start>=today && end>=today){
+                if(hours>0){
+                    if(city && date1 && date2){
+                        const bookingData={
+                            city,date1,date2
+                        }
+                        localStorage.setItem("bookingData",JSON.stringify(bookingData))
+                        navigate("/cars")
+                    }
+                    else{
+                        toast("Please fill the details first")
+                    }
+                
                 }
-                localStorage.setItem("bookingData",JSON.stringify(bookingData))
-                navigate("/cars")
+                else{
+                    toast("select a proper Date")
+                    setDate1("")
+                    setDate2("")
+                }
             }
             else{
-                toast("Please fill the details first")
+                toast.warn("Select Proper Date")
             }
-        
-        }
-        else{
-            toast("select a proper Date")
-            setDate1("")
-            setDate2("")
-        }
+            
     }
         else{
             toast("Please Log In First");
