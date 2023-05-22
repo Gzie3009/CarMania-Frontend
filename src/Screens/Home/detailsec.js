@@ -11,11 +11,9 @@ const Detailsec = () => {
     const [date2,setDate2]=useState("");
     const start=new Date(date1);
     const end=new Date(date2)
-    const today = new Date();
     const hours= (end-start)/3600000;
     const handleClick=()=>{
         if(data.auth){
-            if(start>=today && end>=today){
                 if(hours>0){
                     if(city && date1 && date2){
                         const bookingData={
@@ -39,11 +37,6 @@ const Detailsec = () => {
                 toast.warn("Select Proper Date")
             }
             
-    }
-        else{
-            toast("Please Log In First");
-            navigate("/login")
-        }
     }
     
     var Punjab = ["Amritsar","Barnala","Bathinda","Faridkot","Fatehgarh Sahib","Fazilka","Firozpur","Gurdaspur","Hoshiarpur","Jalandhar","Kapurthala","Ludhiana","Mansa","Moga","Mohali","Muktsar","Pathankot","Patiala","Rupnagar","Sangrur","Shaheed Bhagat Singh Nagar","Tarn Taran"];
