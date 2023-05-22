@@ -2,7 +2,6 @@
   "name": "front-end",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3010/",
   "dependencies": {
     "@floating-ui/dom": "^1.2.1",
     "@reduxjs/toolkit": "^1.9.3",

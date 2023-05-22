@@ -195,7 +195,7 @@ const CheckOut = () => {
                 </div></>}
               </div>
             </div>
-            <div class="grid place-items-center mt-10">
+            <div class=" mt-10">
               <h3>Need a Driver?</h3>
               <div className="flex gap-10">
                 <div className="flex" onClick={()=>setDriver(1)}>
@@ -213,17 +213,17 @@ const CheckOut = () => {
                 </div>
               </div>
             </div>
-
             {loading2?
           <div className=''>
-        <button class="lg:ml-56 md:ml-40 btn-checkout w-1/2 h-20 grid place-items-center rounded-lg p-5 mt-5 hover:text-black font-bold ">
-        <div class="lds-dual-ring"></div>
-        </button>
+        <div class="w-full bg-blue-400 h-15 rounded-lg mt-5 grid place-items-center hover:text-black font-bold ">
+        <div class="lds-dual-ring pt-3"></div>
+        </div>
         </div>
         :
         <div className=''>
-        <button onClick={handleCLick} class="w-full btn-checkout rounded-lg p-5 mt-5 hover:text-black font-bold " data-aos="zoom-in-up">Continue</button>
+        <div onClick={handleCLick} className="w-full bg-[#20BFB6] text-3xl text-white h-20 rounded-lg mt-5 grid place-items-center hover:shadow-xl hover:cursor-pointer hover:text-black font-bold">Continue</div>
         </div>}
+
           </div>
         </div>
       }
